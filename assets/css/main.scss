@@ -385,6 +385,7 @@
   position: relative;
   z-index: -1;
   margin-top: -200px;
+  // margin-bottom: 160px;
 }
 /********************* Start After Crads section *********************/
 
@@ -466,23 +467,24 @@
   height: 450px;
 }
 
-.contact-sec {
-  margin-top: -150px;
-  margin-bottom: 100px;
+// .contact-sec {
+//   // margin-top: -150px;
+//   margin-bottom: 100px;
 
-  @media screen and (max-width: $screen-xs) {
-    margin-bottom: 60px;
-  }
-}
+//   @media screen and (max-width: $screen-xs) {
+//     margin-bottom: 60px;
+//   }
+// }
 
 .contact-style {
   height: 100%;
   background-color: $white;
   border: 1px solid #e7e7e7;
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   margin: 0px 12px;
   padding: 50px;
+  border-radius: 10px;
 
   @media screen and (max-width: $screen-sm) {
     padding: 30px 20px;
@@ -490,23 +492,24 @@
 }
 
 .contact-title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   color: $black;
   margin-bottom: 10px;
 
   @media screen and (max-width: $screen-xs) {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
 .contact-info {
-  font-size: 16px;
+  font-size: 14px;
   color: $black;
   margin-bottom: 35px;
+  line-height: 1.7;
 
   @media screen and (max-width: $screen-xs) {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -525,7 +528,7 @@
   }
 
   .ic {
-    background: #fef4f0;
+    background: #f4f4f4;
     color: $main;
     line-height: 1;
     width: 64px;
@@ -533,6 +536,8 @@
     @include center;
     font-size: 18px;
     flex-shrink: 0;
+  border-radius: 10px;
+
 
     @media screen and (max-width: $screen-sm) {
       width: 50px;
@@ -543,18 +548,18 @@
   .box-content {
     .name {
       display: block;
-      font-size: 18px;
-      margin-bottom: 4px;
+      font-size: 16px;
+      margin-bottom: 10px;
       line-height: 1.4;
 
       @media screen and (max-width: $screen-xs) {
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 6px;
       }
     }
 
     .desc {
-      font-size: 17px;
+      font-size: 14px;
       color: $sec;
       line-height: 1.5;
 

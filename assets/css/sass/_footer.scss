@@ -43,6 +43,11 @@
   margin-bottom: 40px;
   position: relative;
   color: #fff;
+  
+  @include devices(xs) {
+    font-size: 18px;
+    padding-bottom: 14px;
+  }
 }
 .footer-title:after {
   content: "";
@@ -90,6 +95,10 @@
 .list-2 li a {
   text-decoration: underline;
   color: $white;
+
+  @include devices(xs) {
+    font-size: 14px;
+  }
 }
 .widget_subscribe p {
   margin-bottom: 20px;
@@ -99,6 +108,10 @@
 .widget.widget_about p {
   font-size: 16px;
   line-height: 28px;
+
+  @include devices(xs) {
+    font-size: 14px;
+  }
 }
 .widget_subscribe .input-group .form-control {
   height: 60px;
