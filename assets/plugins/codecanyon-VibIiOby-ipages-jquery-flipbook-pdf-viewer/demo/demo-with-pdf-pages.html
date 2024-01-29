@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../build/dev/ipages.min.css">
+	<!-- /end css -->
+</head>
+<body>
+<p>This is just a simple example to show you how the plugin works with a pdf document</p>
+
+<!-- flipbook markup -->
+<div id="flipbook" data-pdf-disable-range-requests="false"></div>
+<!-- /end flipbook markup -->
+
+<!-- scripts-section -->
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../build/dev/pdf.min.js"></script>
+<script type="text/javascript" src="../build/dev/jquery.ipages.min.js"></script>
+<script>
+$(document).ready(function() {
+	var options = {
+		responsive:true,
+		autoFit:false,
+		
+		containerHeight:'100%',
+		
+		padding:{
+			top:50,
+			left:50,
+			right:50,
+			bottom:50
+		},
+		
+		pdfUrl: 'assets/pdf/magazine.pdf',
+		
+		pages: [
+			{ type: "pdf", page: 1 },
+			{ type: "pdf", page: 2 },
+			{ type: "pdf", page: 3 },
+			{ type: "pdf", page: 4 },
+			{ type: "pdf", page: 7 },
+			{ type: "pdf", page: 8 },
+		]
+	};
+	
+	$('#flipbook').ipages(options);
+	
+	// Events
+	$('#flipbook').on('ipages:ready', function(e, plugin) {
+		console.log('event:ready');
+	});
+	
+	$('#flipbook').on('ipages:showpage', function(e, plugin, page) {
+		console.log('event:showpage [' + page + ']');
+	});
+	
+	$('#flipbook').on('ipages:hidepage', function(e, plugin, page) {
+		console.log('event:hidepage [' + page + ']');
+	});
+});
+</script>
+<!-- /end scripts-section -->
+</body>
+</html>

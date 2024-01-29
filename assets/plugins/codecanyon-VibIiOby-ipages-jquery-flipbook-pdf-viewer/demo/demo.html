@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<link rel="stylesheet" type="text/css" href="../build/dev/ipages.min.css">
+	<style>
+		.ipgs {
+			height:900px;
+			border:10px solid transparent;
+			box-sizing:border-box;
+		}
+	</style>
+</head>
+<body>
+<!-- flipbook markup -->
+<div id="flipbook-landscape"></div>
+<div id="flipbook-portrait"></div>
+<!-- /end flipbook markup -->
+
+<!-- scripts-section -->
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../build/dev/pdf.min.js"></script>
+<script type="text/javascript" src="../build/dev/jquery.ipages.min.js"></script>
+<script>
+$(document).ready(function() {
+	var options = {
+		bookEngine: 'OnePageFlip',
+		
+		responsive:true,
+		autoFit:true,
+		
+		padding:{
+			top:10,
+			left:10,
+			right:10,
+			bottom:70
+		},
+		
+		pdfAutoLoad: true,
+		pdfAutoCreatePages: true
+	};
+	
+	options.pdfUrl = 'assets/pdf/landscape.pdf';
+	
+	$('#flipbook-landscape').ipages(options);
+	
+	options.pdfUrl = 'assets/pdf/portrait.pdf';
+	
+	$('#flipbook-portrait').ipages(options);
+});
+</script>
+<!-- /end scripts-section -->
+</body>
+</html>

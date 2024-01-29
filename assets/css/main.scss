@@ -1,0 +1,1004 @@
+@import "sass/variables", "sass/mixins", "sass/global", "sass/components",
+  "sass/navbar", "sass/footer";
+
+/********************* Start Slider section *********************/
+
+.home-sec {
+  .home-item {
+    position: relative;
+    height: calc(100vh - 111px);
+    display: flex;
+    align-items: center;
+
+    // @media screen and (max-width: $screen-lg) {
+    //   height: 400px;
+    // }
+
+    // @media screen and (max-width: $screen-sm) {
+    //   height: 200px;
+    // }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      z-index: -1;
+    }
+
+    .home-img {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    .content {
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      @media screen and (max-width: $screen-sm) {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 24px;
+        color: $white;
+
+        @media screen and (max-width: $screen-sm) {
+          font-size: 22px;
+        }
+
+        @media screen and (max-width: $screen-xs) {
+          font-size: 20px;
+        }
+      }
+
+      .desc {
+        font-size: 16px;
+        color: $white;
+
+        @media screen and (max-width: $screen-xs) {
+          font-size: 15px;
+        }
+      }
+
+      .main-btn {
+        width: fit-content;
+      }
+    }
+  }
+}
+
+/********************* End Slider section *********************/
+
+/********************* Start brand section *********************/
+
+.clients-slider {
+  .owl-stage-outer {
+    padding: 20px 0;
+
+    .owl-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.client-item {
+  background-color: $white;
+  box-shadow: $main-shadow;
+  padding: 15px 20px;
+  @include center;
+  width: 200px;
+  height: 100px;
+  border-radius: 12px;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    @include circle(40px);
+    background-color: rgba($color: $sec, $alpha: 0.1);
+    z-index: -1;
+  }
+
+  &::after {
+    top: -8px;
+    @include dir-right(-8px);
+  }
+
+  &::before {
+    bottom: -8px;
+    @include dir-left(-8px);
+  }
+}
+
+.brand-img {
+  max-width: 80px;
+  max-height: 75px;
+}
+
+/********************* End brand section *********************/
+
+/********************* Start About section *********************/
+.about-sec {
+  background-color: rgba($color: $sec, $alpha: 0.04);
+}
+
+.about-container {
+  @include between;
+  gap: 60px;
+
+  @media screen and (max-width: $screen-lg2) {
+    gap: 30px;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: 300px;
+    height: 300px;
+
+    @media screen and (max-width: $screen-lg2) {
+      width: 240px;
+      height: 240px;
+    }
+
+    @media screen and (max-width: $screen-lg) {
+      width: 155px;
+      height: 155px;
+    }
+
+    position: relative;
+    @include center;
+    flex-shrink: 0;
+
+    .img {
+      max-width: 100px;
+
+      @media screen and (max-width: $screen-lg) {
+        max-width: 70px;
+      }
+    }
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+  }
+
+  .about-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+
+    .title {
+      font-size: 22px;
+      color: $black;
+      font-family: fontBold;
+
+      @media screen and (max-width: $screen-lg2) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: $screen-lg) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+/********************* End About section *********************/
+
+/********************* Start Message section *********************/
+.message-sec {
+  position: relative;
+  .mask-img {
+    flex-shrink: 0;
+    margin-bottom: 40px;
+    @include dir-margin-left(25px);
+
+    @media screen and (max-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img-con {
+      width: 300px;
+      height: 327px;
+      position: relative;
+      border: 2px solid $main;
+      border-radius: 15px 0;
+
+      .message-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        top: 15px;
+        @include dir-right(15px);
+        z-index: 2;
+        border-radius: 15px 0;
+        transition: all 0.2s linear 0s;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $main;
+        @include dir-left(-30px);
+        bottom: -30px;
+        border-radius: 15px 0;
+      }
+    }
+
+    &.left {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media screen and (max-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      justify-content: center !important;
+    }
+  }
+}
+
+/********************* End Message section *********************/
+
+/********************* Start Pdf section *********************/
+.pdf-sec {
+  background-color: rgba($color: $sec, $alpha: 0.04);
+  position: relative;
+}
+
+.regulations-content {
+  .regul-item {
+    box-shadow: 0 1px 5px rgb(0 0 0 / 5%);
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .reg-info {
+      display: block;
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      background-color: $white;
+      color: $black;
+      font-size: 17px;
+      transition: $main-transition;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 15px;
+        padding: 20px 15px;
+      }
+
+      .reg-icon {
+        @include circle(28px);
+        background-color: $sec;
+        color: $white;
+        font-size: 14px;
+        @include center;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.4s ease;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      @include dir-left(0);
+      background-color: $sec;
+      width: 0;
+      height: 3px;
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      .reg-info {
+        color: $sec;
+
+        .reg-icon {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &.sec {
+    .regul-item {
+      &::after {
+        background-color: $main;
+      }
+
+      .reg-info {
+        .reg-icon {
+          background-color: $main;
+        }
+      }
+
+      &:hover {
+        .reg-info {
+          color: $main;
+        }
+      }
+    }
+  }
+}
+
+/********************* End Pdf section *********************/
+
+/********************* Start Program section *********************/
+
+.program-links {
+  .program-link {
+    padding: 55px 20px 30px;
+    border: 2px solid $sec;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    transition: all 0.4s ease;
+
+    @media screen and (max-width: $screen-md) {
+      padding: 50px 20px 20px;
+    }
+
+    .pro-link-text {
+      font-size: 17px;
+      color: $sec;
+      transition: all 0.3s ease;
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 15px;
+      }
+    }
+
+    .pro-link-img {
+      position: absolute;
+      top: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 56px;
+      max-height: 56px;
+      object-fit: cover;
+      transition: $main-transition;
+
+      @media screen and (max-width: $screen-md) {
+        top: -25px;
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+
+    &.sm {
+      padding: 45px 20px 25px;
+    }
+
+    &:hover {
+      background-color: $sec;
+
+      .pro-link-text {
+        color: $white;
+
+        @media screen and (max-width: $screen-lg) {
+          font-size: 16px;
+        }
+      }
+
+      .pro-link-img {
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
+
+    &.light {
+      border-color: #c5c5c5;
+
+      &:hover {
+        border-color: var(--main-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .program-links .program-link {
+    padding: 40px 20px 15px;
+  }
+
+  .program-links .program-link .pro-link-text {
+    font-size: 15px;
+  }
+
+  .program-links .program-link .pro-link-img {
+    top: -20px;
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+/********************* End Program section *********************/
+
+/********************* Start Gallary section *********************/
+.gallary {
+  display: grid;
+  grid-template-areas:
+    "header sec three three"
+    "header four five six"
+    "seven seven last six";
+  gap: 10px;
+  grid-auto-rows: 200px;
+
+  @media screen and (max-width: $screen-lg) {
+    grid-auto-rows: 180px;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    @include grid(170px, 10px);
+    grid-template-areas: unset;
+  }
+
+  .fancybox-img {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: $main-transition;
+    }
+
+    .gallary-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $main-transition;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+
+      .gallary-img {
+        transform: scale(1.1);
+      }
+    }
+
+    &:first-child {
+      grid-area: header;
+    }
+
+    &:nth-child(2) {
+      grid-area: sec;
+    }
+
+    &:nth-child(3) {
+      grid-area: three;
+    }
+
+    &:nth-child(4) {
+      grid-area: four;
+    }
+
+    &:nth-child(5) {
+      grid-area: five;
+    }
+
+    &:nth-child(6) {
+      grid-area: six;
+    }
+
+    &:nth-child(7) {
+      grid-area: seven;
+    }
+
+    &:nth-child(8) {
+      grid-area: last;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      grid-area: unset !important;
+    }
+  }
+}
+/********************* End Gallary section *********************/
+
+/********************* Start Video section *********************/
+
+.video-card {
+  background-color: $white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: $main-shadow;
+
+  .video-container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+
+    .player-con {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(0 0 0 / 60%);
+      z-index: 1;
+      @include center;
+      /* cursor: pointer; */
+
+      &:hover {
+        .play-v {
+          width: 57px;
+          height: 57px;
+          background-color: $orange;
+          outline-color: #f6731191;
+        }
+      }
+    }
+
+    .play-v {
+      background-color: rgba($color: $sec, $alpha: 0.8);
+      font-size: 18px;
+      @include circle(50px);
+      color: #fff;
+      cursor: pointer;
+      @include center;
+      outline: 7px solid transparent;
+      transition: $main-transition;
+    }
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-info {
+    padding: 20px;
+    @include between;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    .video-name {
+      font-size: 17px;
+      color: $black;
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 16px;
+      }
+    }
+
+    .video-icon {
+      font-size: 15px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: rgb(0 55 49 / 80%);
+      @include dir-margin-left(auto);
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 14px;
+        grid-area: 8px;
+      }
+    }
+  }
+}
+
+/********************* End video section *********************/
+
+/********************* Start Book section *********************/
+.ipgs-flipbook {
+  direction: ltr;
+  height: 500px !important;
+  width: 680px !important;
+  margin: auto !important;
+  @media screen and (max-width: $screen-lg) {
+    width: 100% !important;
+  }
+}
+/********************* End Book section *********************/
+
+/********************* Start Blog section *********************/
+// blog-cards
+.blog-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: $main-transition;
+  background-color: $white;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px 0 rgba($color: $black, $alpha: 0.2);
+  }
+
+  .blog-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: 17px 10px;
+    .head {
+      @include between;
+      gap: 5px;
+      margin-bottom: 14px;
+      // flex-wrap: wrap;
+
+      .name {
+        font-size: 17px;
+        color: $black;
+        text-overflow: ellipsis;
+      }
+
+      .date {
+        font-size: 14px;
+        color: $text-color;
+        font-family: fontReg;
+      }
+    }
+
+    .info {
+      font-size: 15px;
+      color: $black;
+      margin-bottom: 14px;
+      height: 75px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      line-height: 1.7;
+
+      @media screen and (max-width: $screen-md) {
+        height: auto;
+        -webkit-line-clamp: initial;
+      }
+    }
+
+    .main-btn {
+      width: calc(100% - 80px);
+      margin: auto;
+      // background-color: $sec !important;
+      // border-color: $sec !important;
+
+      @media screen and (max-width: $screen-md) {
+        width: calc(100% - 40px);
+      }
+
+      @media screen and (max-width: $screen-xs) {
+        width: calc(100% - 20px);
+      }
+    }
+  }
+}
+/********************* End Blog section *********************/
+
+/********************* Start person-card section *********************/
+.person-card {
+  // background-color: #fafafa;
+  background-color: rgba($color: $sec, $alpha: 0.1);
+  padding: 25px;
+  @include center;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: $main-shadow;
+
+  .person-img {
+    overflow: hidden;
+    width: 210px;
+    height: 210px;
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%
+    );
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $main-transition;
+    }
+  }
+
+  .person-content {
+    @include center;
+    flex-direction: column;
+    gap: 12px;
+
+    .person-name {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &:hover {
+    .person-img {
+      .img {
+        transform: scale(1.2) rotate(-4deg);
+      }
+    }
+  }
+}
+
+.structure-img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+/********************* End person-card section *********************/
+
+/********************* Start new-detailes section *********************/
+.new-detailes {
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (max-width: $screen-md) {
+      flex-wrap: wrap;
+    }
+
+    .new-detailes-img{
+      flex-basis: 50%;
+
+      @media screen and (max-width: $screen-md) {
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+
+    .img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+
+      @media screen and (max-width: $screen-md) {
+        flex-basis: 100%;
+        width: 100%;
+        height: 240px;
+      }
+    }
+
+    .left {
+      .name {
+        font-size: 22px;
+        color: $black;
+        margin-bottom: 15px;
+        font-family: fontDemi;
+
+        @media screen and (max-width: $screen-xs) {
+          font-size: 19px;
+        }
+      }
+
+      .date {
+        font-size: 17px;
+        color: $text-color;
+
+        @media screen and (max-width: $screen-xs) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .info {
+    font-size: 17px;
+    line-height: 1.6;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 15px;
+    }
+  }
+}
+/********************* End new-detailes section *********************/
+
+
+/********************* Start contact-box section *********************/
+.contact-box{
+  background-color: $white;
+  border-radius: 12px;
+  // box-shadow: $main-shadow;
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: $main-transition;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  @media screen and (max-width:$screen-md) {
+    padding: 15px;
+    gap: 12px;
+  }
+  
+  .ic{
+    @include circle(60px);
+    @include center;
+    background-color: $main;
+    font-size: 24px;
+    color: $white;
+    transition: $main-transition;
+
+    @media screen and (max-width:$screen-md) {
+      @include circle(50px);
+      font-size: 20px;
+    }
+  }
+
+  .name{
+    font-size: 18px;
+    color: $black;
+
+    @media screen and (max-width:$screen-md) {
+      font-size: 16px;
+    }
+  }
+  
+  .desc{
+    font-size: 14px;
+    color: $black;
+
+    @media screen and (max-width:$screen-md) {
+      font-size: 13px;
+    }
+  }
+
+
+  &:hover{
+    transform: translateY(-10px);
+
+    .ic{
+      background-color: $sec;
+    }
+  }
+
+}
+
+.contact-form{
+  background-color: $white;
+  border-radius: 12px;
+  // box-shadow: $main-shadow;
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 35px 25px;
+  transition: $main-transition;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 65;
+
+  @media screen and (max-width:$screen-md) {
+    padding: 20px 15px;
+  }
+
+  .input-g{
+    margin-bottom: 24px;
+  }
+
+  .input-me{
+    background-color: $white !important;
+    // border: 1px solid #ddd !important;
+  }
+}
+
+.contact-img{
+  max-width: 100%;
+  max-height: 360px;
+
+  @media screen and (max-width:$screen-lg) {
+    display: none;
+  }
+}
+
+/********************* End contact-box section *********************/
+
+/********************* Start service-request-page section *********************/
+.service-request-page{
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: -1;
+  }
+
+  .request_bg {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+}
+
+.request-form{
+  padding: 25px 50px;
+  background-color: $white;
+  border-radius: 12px;
+  
+  @media screen and (max-width:$screen-md) {
+    padding: 25px;
+  }
+}
+
+.form-logo{
+  max-width: 80px;
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.form-title{
+  font-size: 18px;
+  color: $black;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 18px;
+}
+/********************* End service-request-page section *********************/

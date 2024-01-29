@@ -1,0 +1,254 @@
+.page-header {
+  padding: 7px 0;
+  background-color: $main;
+
+  .header-content {
+    @include between;
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .social-ic {
+        .ic {
+          max-width: 18px;
+          max-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.page-navbar {
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 888;
+  background-color: $white;
+  transition: $main-transition;
+  box-shadow: $main-shadow;
+
+  @media screen and (max-width: $screen-lg) {
+    position: unset;
+    padding: 12px 0;
+  }
+
+  .navbar-content {
+    @include between;
+
+    .logo {
+      .logo-img {
+        max-width: 75px;
+        max-height: 75px;
+        transition: $main-transition;
+
+        @media screen and (max-width: $screen-sm) {
+          max-width: 55px;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
+
+      @media screen and (max-width:$screen-lg) {
+          position: fixed;
+          top: 0;
+          @include dir-left(0);
+          height: 100vh;
+          width: 280px;
+          flex-direction: column;
+          align-items: flex-start;
+          background-color: $white;
+          box-shadow: $nav-shadow;
+          z-index: 2000;
+          padding: 30px 20px;
+          gap: 8px;
+          #{$ltr} & {
+              transform: translateX(-150%);
+          }
+          #{$rtl} & {
+              transform: translateX(150%);
+          }
+
+          &.active{
+              transform: translateX(0) !important;
+          }
+
+          overflow-y: auto;
+          overflow-x: clip;
+
+          &::-webkit-scrollbar {
+              width: 5px;
+          }
+          &::-webkit-scrollbar-track {
+              background: transparent;
+          }
+          &::-webkit-scrollbar-thumb {
+              border-radius: 25px;
+              background-color: $main;
+          }
+      }
+
+      .logo {
+        display: none;
+        max-width: 80px;
+        max-height: 90px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        @media screen and (max-width: $screen-lg) {
+          display: block;
+          margin: 0 auto 25px;
+        }
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        height: 45px;
+        font-size: 15px;
+        transition: $main-transition;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          @include dir-left(0);
+          width: 0;
+          height: 1px;
+          border-radius: 5px;
+          background-color: $main;
+          transition: $main-transition;
+        }
+
+        &.dropdown-m-container{
+          &::after{
+            display: none;
+          }
+        }
+
+        @media screen and (max-width:$screen-lg) {
+          width: 100%;
+          padding: 5px;
+        }
+
+        i{
+            font-size: 8px;
+        }
+
+        :last-child {
+          margin-left: 0;
+        }
+
+        &:hover {
+          color: $main;
+          .nav-dropdown {
+            opacity: 1;
+            top: 45px;
+            z-index: 20;
+            pointer-events: auto;
+          }
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        .nav-dropdown {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .lin-name {
+        display: flex;
+        align-items: center;
+        color: $sec;
+        font-size: 15px;
+        transition: $main;
+        position: relative;
+        padding: 5px;
+      }
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      @media screen and (min-width: $screen-lg) and (max-width: $screen-lg2) {
+        gap: 8px;
+      }
+
+      @media screen and (max-width: $screen-xs) {
+        gap: 8px;
+      }
+
+      .nav-ic {
+        @include circle(42px);
+        @include center;
+        background-color: $light4 !important;
+        cursor: pointer;
+        position: relative;
+
+        &.bell {
+          &::after {
+            content: "";
+            position: absolute;
+            @include circle(10px);
+            top: 5px;
+            @include dir-left(-2px);
+            background-color: $red;
+            border: 1px solid $white;
+          }
+        }
+
+        .ic {
+          max-width: 20px;
+          max-height: 20px;
+          font-size: 16px;
+          // color: $black;
+        }
+      }
+
+      .side-open {
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width: $screen-lg) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &.scroll {
+    top: -1px;
+    padding: 7px;
+    box-shadow: $main-shadow;
+
+    .navbar-content {
+      @include between;
+
+      .logo {
+        .logo-img {
+          max-width: 65px;
+          max-height: 80px;
+        }
+      }
+    }
+  }
+}
