@@ -346,52 +346,6 @@
   }
 }
 
-.owl-nav {
-  .owl-prev,
-  .owl-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: $white !important;
-    cursor: pointer;
-    transition: $main-transition;
-    font-size: 24px !important;
-
-    // &:hover{
-    //   color: $main !important;
-    // }
-
-    @media screen and (max-width: $screen-lg) {
-      display: none;
-    }
-  }
-
-  .owl-prev {
-    right: 25px;
-  }
-
-  .owl-next {
-    left: 25px;
-  }
-}
-
-.owl-dots {
-  @include center;
-  gap: 7px;
-  margin-top: 15px;
-  .owl-dot {
-    @include circle(10px);
-    background-color: rgba($color: #272265, $alpha: 0.24) !important;
-    // opacity: .5;
-    transition: $main-transition;
-
-    &.active {
-      // opacity: 1;
-      background-color: $main !important;
-    }
-  }
-}
-
 /********************* DropDown *********************/
 
 .dropdown-m-container {
@@ -829,84 +783,49 @@
 
 .main-title {
   color: $black;
-  font-size: 19px;
-  // font-family: fontDemi;
-  font-weight: 600;
-  margin: auto;
+  font-size: 18px;
+  font-weight: 700;
   position: relative;
   width: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-
-  img {
-    max-width: 100px;
-  }
 
   @media screen and (max-width: $screen-xs) {
-    font-size: 18px;
+    font-size: 16px;
   }
-}
 
-.big-title {
-  font-size: 23px;
-  color: $dark;
-  font-family: fontDemi;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: $main;
+    bottom: -8px;
+    border-radius: 15px;
+  }
+
+  &::before {
+    @include dir-left(0);
+    width: calc(100% - 13px);
+  }
+
+  &::after {
+    @include dir-right(0);
+    width: 10px;
+  }
 
   @media screen and (max-width: $screen-sm) {
-    font-size: 20px;
-  }
-
-  &.sm {
     font-size: 17px;
   }
-}
-
-.section-head {
-  @include between;
-  gap: 10px;
-}
-
-.section-title {
-  color: $main;
-  font-size: 19px;
-  font-family: fontDemi;
 
   @media screen and (max-width: $screen-xs) {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
-.card-title {
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 16px;
-  font-family: fontDemi;
-  @include between;
-
-  .icon {
-    font-size: 18px;
-    color: $main;
-
-    .img {
-      max-width: 13px;
-    }
-  }
-}
-
-.card-padding {
-  padding: 20px;
-}
-
-.card-px {
-  padding: 12px 20px;
-}
-
-.main-link {
+.main_text{
   font-size: 15px;
-  cursor: pointer;
-  color: $black;
-  text-decoration: underline;
+  color: $main;
+  text-align: center;
+  margin-bottom: 22px;
 }
 
 .main-item {
@@ -1115,12 +1034,12 @@
 .main-btn {
   @include center;
   gap: 7px;
-  min-width: 160px;
+  min-width: 150px;
   background-color: $main;
   border: 1px solid $main;
-  border-radius: 100px;
+  border-radius: 7px;
   color: $white;
-  font-size: 15px;
+  font-size: 14px;
   height: 44px;
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
@@ -1131,7 +1050,7 @@
 
   @media screen and (max-width: $screen-sm) {
     height: 45px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   @media screen and (max-width: $screen-sm) {
@@ -1576,6 +1495,14 @@
 
   @media screen and (max-width: $screen-xs) {
     padding-bottom: 38px;
+  }
+}
+
+.mb-6 {
+  margin-bottom: 4rem;
+  
+  @media screen and (max-width: $screen-xs) {
+    margin-bottom: 2.5rem;
   }
 }
 

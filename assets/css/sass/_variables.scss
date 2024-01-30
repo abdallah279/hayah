@@ -35,11 +35,11 @@ $side-color: #939393;
 $text-color: #3D444F;
 $main-shadow: 0 0 5px 0 rgba($color: $black, $alpha: .1);
 $sec-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;;
-$side-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+$card-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 $nav-shadow: 0 3px 16px rgb(133 133 133 / 5%);
 $text-shadow: 0 2px 2px rgba($color: $dark, $alpha: .1);
 $img-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 25%);
-$main-transition: all .3s ease-in-out;
+$main-transition: all 0.31s ease-in-out;
 
 /*********************************************************
   // Font variables

@@ -230,3 +230,43 @@
     transform: translateX($value);
   }
 }
+
+
+// Media Queries
+@mixin devices($breakpoint) {
+  @if $breakpoint == xx {
+    @media only screen and (max-width: $screen-xx) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (max-width: $screen-xl) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (max-width: $screen-lg) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (max-width: $screen-md) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media only screen and (max-width: $screen-sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xs {
+    @media only screen and (max-width: $screen-xs) {
+      @content;
+    }
+  }
+}

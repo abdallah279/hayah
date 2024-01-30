@@ -14,9 +14,9 @@
     //   height: 400px;
     // }
 
-    // @media screen and (max-width: $screen-sm) {
-    //   height: 200px;
-    // }
+    @media screen and (max-width: $screen-sm) {
+      height: 500px;
+    }
 
     &::after {
       content: "";
@@ -50,24 +50,20 @@
       }
 
       .title {
-        font-size: 24px;
+        font-size: 22px;
         color: $white;
 
-        @media screen and (max-width: $screen-sm) {
-          font-size: 22px;
-        }
-
         @media screen and (max-width: $screen-xs) {
-          font-size: 20px;
+          font-size: 17px;
         }
       }
 
       .desc {
-        font-size: 16px;
+        font-size: 15px;
         color: $white;
 
         @media screen and (max-width: $screen-xs) {
-          font-size: 15px;
+          font-size: 13px;
         }
       }
 
@@ -76,388 +72,410 @@
       }
     }
   }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120px;
+    display: grid;
+    gap: 16px;
+    z-index: 1;
+
+    .owl-next,
+    .owl-prev {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: rgba($color: $main, $alpha: 0.06) !important;
+      border: 1px solid $white !important;
+      color: $white !important;
+      @include center;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 0.3px;
+      -webkit-text-stroke-color: $white;
+    }
+  }
+
+  .owl-dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120px;
+    @include center;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (max-width: $screen-md) {
+      display: none !important;
+    }
+    
+    .owl-dot {
+      @include circle(20px);
+      position: relative;
+      transition: $main-transition;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include circle(5px);
+        background-color: $white;
+      }
+
+      &.active {
+        background-color: rgba($color: $main, $alpha: 0.6);
+      }
+    }
+
+  }
+  
 }
 
 /********************* End Slider section *********************/
 
-/********************* Start brand section *********************/
-
-.clients-slider {
-  .owl-stage-outer {
-    padding: 20px 0;
-
-    .owl-item {
-      display: flex;
-      align-items: center;
-    }
-  }
-}
-.client-item {
-  background-color: $white;
-  box-shadow: $main-shadow;
-  padding: 15px 20px;
-  @include center;
-  width: 200px;
-  height: 100px;
-  border-radius: 12px;
-  position: relative;
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    @include circle(40px);
-    background-color: rgba($color: $sec, $alpha: 0.1);
-    z-index: -1;
-  }
-
-  &::after {
-    top: -8px;
-    @include dir-right(-8px);
-  }
-
-  &::before {
-    bottom: -8px;
-    @include dir-left(-8px);
-  }
-}
-
-.brand-img {
-  max-width: 80px;
-  max-height: 75px;
-}
-
-/********************* End brand section *********************/
-
 /********************* Start About section *********************/
-.about-sec {
-  background-color: rgba($color: $sec, $alpha: 0.04);
-}
 
-.about-container {
-  @include between;
+.about-content {
+  display: flex;
+  align-items: center;
   gap: 60px;
 
-  @media screen and (max-width: $screen-lg2) {
-    gap: 30px;
-  }
-
   @media screen and (max-width: $screen-lg) {
-    gap: 20px;
-  }
-
-  @media screen and (max-width: $screen-md) {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
     flex-direction: column;
   }
 
   .about-img {
-    width: 300px;
-    height: 300px;
-
-    @media screen and (max-width: $screen-lg2) {
-      width: 240px;
-      height: 240px;
-    }
-
-    @media screen and (max-width: $screen-lg) {
-      width: 155px;
-      height: 155px;
-    }
-
+    width: 360px;
+    height: 400px;
     position: relative;
-    @include center;
     flex-shrink: 0;
+    box-shadow: $main-shadow;
+    border: 5px solid $white;
+    border-radius: 7px;
 
-    .img {
-      max-width: 100px;
-
-      @media screen and (max-width: $screen-lg) {
-        max-width: 70px;
-      }
+    @media screen and (max-width: $screen-xs) {
+      width: 315px;
+      height: 380px;
     }
 
-    .bg {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      opacity: 0.4;
-    }
-  }
-
-  .about-content {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 18px;
-
-    .title {
-      font-size: 22px;
-      color: $black;
-      font-family: fontBold;
-
-      @media screen and (max-width: $screen-lg2) {
-        font-size: 20px;
-      }
-
-      @media screen and (max-width: $screen-lg) {
-        font-size: 18px;
-      }
-    }
-  }
-}
-/********************* End About section *********************/
-
-/********************* Start Message section *********************/
-.message-sec {
-  position: relative;
-  .mask-img {
-    flex-shrink: 0;
-    margin-bottom: 40px;
-    @include dir-margin-left(25px);
-
-    @media screen and (max-width: $screen-lg) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .img-con {
-      width: 300px;
-      height: 327px;
-      position: relative;
-      border: 2px solid $main;
-      border-radius: 15px 0;
-
-      .message-img {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        object-fit: cover;
-        top: 15px;
-        @include dir-right(15px);
-        z-index: 2;
-        border-radius: 15px 0;
-        transition: all 0.2s linear 0s;
-      }
-
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border: 2px solid $main;
-        @include dir-left(-30px);
-        bottom: -30px;
-        border-radius: 15px 0;
-      }
-    }
-
-    &.left {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    @media screen and (max-width: $screen-lg) {
-      display: flex;
-      align-items: center;
-      justify-content: center !important;
-    }
-  }
-}
-
-/********************* End Message section *********************/
-
-/********************* Start Pdf section *********************/
-.pdf-sec {
-  background-color: rgba($color: $sec, $alpha: 0.04);
-  position: relative;
-}
-
-.regulations-content {
-  .regul-item {
-    box-shadow: 0 1px 5px rgb(0 0 0 / 5%);
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-    .reg-info {
-      display: block;
-      padding: 20px;
-      height: 100%;
-      width: 100%;
-      background-color: $white;
-      color: $black;
-      font-size: 17px;
-      transition: $main-transition;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-
-      @media screen and (max-width: $screen-xs) {
-        font-size: 15px;
-        padding: 20px 15px;
-      }
-
-      .reg-icon {
-        @include circle(28px);
-        background-color: $sec;
-        color: $white;
-        font-size: 14px;
-        @include center;
-        opacity: 0;
-        transform: scale(0);
-        transition: all 0.4s ease;
-      }
+    @media screen and (max-width: $screen-xxs) {
+      width: 290px;
+      height: 340px;
     }
 
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
-      @include dir-left(0);
-      background-color: $sec;
-      width: 0;
-      height: 3px;
-      transition: all 0.5s ease;
+      top: 25px;
+      @include dir-left(-25px);
+      width: calc(100% + 50px);
+      height: calc(100% - 50px);
+      border: 6px solid $main;
+      z-index: -1;
+      border-radius: 7px;
     }
 
-    &:hover {
-      .reg-info {
-        color: $sec;
-
-        .reg-icon {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      &::after {
-        width: 100%;
-      }
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
-  &.sec {
-    .regul-item {
-      &::after {
-        background-color: $main;
-      }
+  .content {
+    .main-title {
+      margin-bottom: 30px;
+    }
 
-      .reg-info {
-        .reg-icon {
-          background-color: $main;
-        }
-      }
+    .text {
+      color: #101010;
+      line-height: 1.8;
+      margin-bottom: 18px;
 
-      &:hover {
-        .reg-info {
-          color: $main;
-        }
+      @include devices(xs) {
+        font-size: 13px;
       }
+    }
+
+    .main-btn {
+      max-width: fit-content;
     }
   }
 }
 
-/********************* End Pdf section *********************/
+/********************* End About section *********************/
 
-/********************* Start Program section *********************/
+/********************* Start Features section *********************/
 
-.program-links {
-  .program-link {
-    padding: 55px 20px 30px;
-    border: 2px solid $sec;
-    border-radius: 8px;
-    position: relative;
-    text-align: center;
-    transition: all 0.4s ease;
+.Features_cards {
+  @include grid(330px, 20px);
+  padding: 40px;
+  border-radius: 15px;
+  background-color: rgba($color: $main, $alpha: 0.06);
+
+  @media screen and (max-width: $screen-md) {
+    @include grid(300px, 20px);
+    padding: 20px 15px;
+  }
+
+  .Feature_card {
+    background-color: $white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 25px 20px;
+    border: 1px solid #e8e7e7;
+    transition: $main-transition;
+    display: flex;
+    align-items: start;
+    gap: 15px;
 
     @media screen and (max-width: $screen-md) {
-      padding: 50px 20px 20px;
+      padding: 25px 15px;
+      gap: 12px;
     }
 
-    .pro-link-text {
+    .title {
       font-size: 17px;
-      color: $sec;
-      transition: all 0.3s ease;
+      margin-bottom: 12px;
+      color: #202020;
+      font-family: fontDemi;
 
       @media screen and (max-width: $screen-xs) {
         font-size: 15px;
       }
     }
 
-    .pro-link-img {
-      position: absolute;
-      top: -28px;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 56px;
-      max-height: 56px;
-      object-fit: cover;
-      transition: $main-transition;
+    .desc {
+      font-size: 14px;
+      color: $sec;
+      line-height: 1.8;
 
-      @media screen and (max-width: $screen-md) {
-        top: -25px;
-        max-width: 50px;
-        max-height: 50px;
+      @media screen and (max-width: $screen-xs) {
+        font-size: 13px;
       }
-    }
-
-    &.sm {
-      padding: 45px 20px 25px;
     }
 
     &:hover {
-      background-color: $sec;
+      box-shadow: $card-shadow;
 
-      .pro-link-text {
-        color: $white;
+      .card_icon {
+        background-color: $main;
+        color: $white !important;
+        -webkit-text-stroke-color: $white;
 
-        @media screen and (max-width: $screen-lg) {
-          font-size: 16px;
+        &::after {
+          background-color: $white;
         }
       }
+    }
+  }
+}
 
-      .pro-link-img {
-        transform: translateX(-50%) scale(1.2);
+.card_icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  background-color: #f9f9f9;
+  color: $main;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $main;
+  transition: $main-transition;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -1.5px;
+    height: 3px;
+    width: 28px;
+    background-color: $main;
+    transition: $main-transition;
+  }
+}
+
+/********************* End Features section *********************/
+
+/********************* Start services-card section *********************/
+
+.services-card {
+  position: relative;
+
+  .service-img {
+    width: 100%;
+    height: 280px;
+    border-radius: 22px;
+    overflow: hidden;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $main-transition;
+    }
+  }
+
+  .services_con {
+    height: 200px;
+  }
+
+  .service-content {
+    border-radius: 25px;
+    border: 1px solid #e8e7e7;
+    box-shadow: $card-shadow;
+    padding: 25px;
+    background-color: $white;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    text-align: center;
+
+    @media screen and (max-width: $screen-md) {
+      width: calc(100% - 30px);
+      padding: 25px 15px;
+    }
+
+    .card_icon {
+      margin-bottom: 14px;
+    }
+
+    .service-name {
+      font-size: 17px;
+      margin-bottom: 14px;
+      color: #202020;
+      font-family: fontDemi;
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 15px;
       }
     }
 
-    &.light {
-      border-color: #c5c5c5;
+    .desc {
+      font-size: 14px;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      height: 80px;
 
-      &:hover {
-        border-color: var(--main-color);
+      @media screen and (max-width: $screen-xs) {
+        height: 70px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  &:hover {
+    .service-img {
+      .img {
+        transform: scale(1.1) rotate(-3deg);
+      }
+    }
+
+    .card_icon {
+      background-color: $main;
+      color: $white !important;
+      -webkit-text-stroke-color: $white;
+
+      &::after {
+        background-color: $white;
       }
     }
   }
 }
 
-@media screen and (max-width: 360px) {
-  .program-links .program-link {
-    padding: 40px 20px 15px;
+/********************* End services-card section *********************/
+
+/********************* Start Partners section *********************/
+
+.agency-item {
+  width: 130px;
+  height: 130px;
+  @include center;
+  position: relative;
+
+
+  @media screen and (max-width: $screen-md) {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    
   }
 
-  .program-links .program-link .pro-link-text {
-    font-size: 15px;
+  &.brand {
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .program-links .program-link .pro-link-img {
-    top: -20px;
-    max-width: 40px;
-    max-height: 40px;
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 50%;
+    border: 2px solid #e8e7e7;
+    transition: $main-transition;
+  }
+
+  &::after {
+    bottom: 0;
+    @include dir-left(0);
+    border-top: none;
+
+    #{$ltr} & {
+      border-right: none;
+    }
+    #{$rtl} & {
+      border-left: none;
+    }
+  }
+
+  &::before {
+    top: 0;
+    @include dir-right(0);
+    border-bottom: none;
+
+    #{$ltr} & {
+      border-left: none;
+    }
+    #{$rtl} & {
+      border-right: none;
+    }
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
-/********************* End Program section *********************/
+
+.brand-img {
+  max-width: 90px;
+  max-height: 100px;
+  width: fit-content !important;
+  margin: 0 auto;
+  /* object-fit: cover; */
+
+  @media screen and (max-width: $screen-xs) {
+    max-width: 70px;
+  }
+}
+
+/********************* End Partners section *********************/
 
 /********************* Start Gallary section *********************/
 .gallary {
@@ -793,7 +811,7 @@
       flex-wrap: wrap;
     }
 
-    .new-detailes-img{
+    .new-detailes-img {
       flex-basis: 50%;
 
       @media screen and (max-width: $screen-md) {
@@ -853,9 +871,8 @@
 }
 /********************* End new-detailes section *********************/
 
-
 /********************* Start contact-box section *********************/
-.contact-box{
+.contact-box {
   background-color: $white;
   border-radius: 12px;
   // box-shadow: $main-shadow;
@@ -867,12 +884,12 @@
   align-items: center;
   gap: 15px;
 
-  @media screen and (max-width:$screen-md) {
+  @media screen and (max-width: $screen-md) {
     padding: 15px;
     gap: 12px;
   }
-  
-  .ic{
+
+  .ic {
     @include circle(60px);
     @include center;
     background-color: $main;
@@ -880,42 +897,40 @@
     color: $white;
     transition: $main-transition;
 
-    @media screen and (max-width:$screen-md) {
+    @media screen and (max-width: $screen-md) {
       @include circle(50px);
       font-size: 20px;
     }
   }
 
-  .name{
+  .name {
     font-size: 18px;
     color: $black;
 
-    @media screen and (max-width:$screen-md) {
+    @media screen and (max-width: $screen-md) {
       font-size: 16px;
     }
   }
-  
-  .desc{
+
+  .desc {
     font-size: 14px;
     color: $black;
 
-    @media screen and (max-width:$screen-md) {
+    @media screen and (max-width: $screen-md) {
       font-size: 13px;
     }
   }
 
-
-  &:hover{
+  &:hover {
     transform: translateY(-10px);
 
-    .ic{
+    .ic {
       background-color: $sec;
     }
   }
-
 }
 
-.contact-form{
+.contact-form {
   background-color: $white;
   border-radius: 12px;
   // box-shadow: $main-shadow;
@@ -926,25 +941,25 @@
   position: relative;
   z-index: 65;
 
-  @media screen and (max-width:$screen-md) {
+  @media screen and (max-width: $screen-md) {
     padding: 20px 15px;
   }
 
-  .input-g{
+  .input-g {
     margin-bottom: 24px;
   }
 
-  .input-me{
+  .input-me {
     background-color: $white !important;
     // border: 1px solid #ddd !important;
   }
 }
 
-.contact-img{
+.contact-img {
   max-width: 100%;
   max-height: 360px;
 
-  @media screen and (max-width:$screen-lg) {
+  @media screen and (max-width: $screen-lg) {
     display: none;
   }
 }
@@ -952,7 +967,7 @@
 /********************* End contact-box section *********************/
 
 /********************* Start service-request-page section *********************/
-.service-request-page{
+.service-request-page {
   position: relative;
 
   &::after {
@@ -977,24 +992,24 @@
   }
 }
 
-.request-form{
+.request-form {
   padding: 25px 50px;
   background-color: $white;
   border-radius: 12px;
-  
-  @media screen and (max-width:$screen-md) {
+
+  @media screen and (max-width: $screen-md) {
     padding: 25px;
   }
 }
 
-.form-logo{
+.form-logo {
   max-width: 80px;
   display: block;
   margin: auto;
   margin-bottom: 15px;
 }
 
-.form-title{
+.form-title {
   font-size: 18px;
   color: $black;
   width: fit-content;
