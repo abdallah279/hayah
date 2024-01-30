@@ -117,7 +117,7 @@
 
             </div>
 
-            <a href="our-locations.html" class="link">مواقعنا</a>
+            <a href="our-locations.html" class="link">فروعنا</a>
 
             <a href="programs.html" class="link">البرامج</a>
 
@@ -440,55 +440,37 @@
     <!-- End Team Section -->
 
 
-    <!-- Start Partners Section -->
-    <section class="Partners-sec main-padding">
+    <!-- Start clients Section -->
+    <section class="client-section main-padding">
       <div class="container">
-        <h2 class="main-title mx-auto mb-6" data-aos="fade-up" data-aos-delay="100">شركائنا</h2>
+          <h4 class="main-title mx-auto mb-5">
+              شركاء النجاح
+              <span class="line"></span>
+          </h4>
 
-        <div class="row g-4 gy-5">
+          <div class="clients-slider owl-carousel">
 
+              <div class="client-item">
+                  <img loading="lazy" src="assets/imgs/client1.png" alt="" class="brand-img">
+              </div>
 
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="agency-item">
-              <img loading="lazy" src="assets/imgs/fundingAgencies_1.png" alt="" class="brand-img">
-            </div>
+              <div class="client-item">
+                  <img loading="lazy" src="assets/imgs/client2.png" alt="" class="brand-img">
+              </div>
+
+              <div class="client-item">
+                  <img loading="lazy" src="assets/imgs/client3.png" alt="" class="brand-img">
+              </div>
+
+              <div class="client-item">
+                  <img loading="lazy" src="assets/imgs/client4.png" alt="" class="brand-img">
+              </div>
+
           </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="agency-item">
-              <img loading="lazy" src="assets/imgs/fundingAgencies_2.png" alt="" class="brand-img">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="agency-item">
-              <img loading="lazy" src="assets/imgs/fundingAgencies_3.png" alt="" class="brand-img">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="agency-item">
-              <img loading="lazy" src="assets/imgs/fundingAgencies_4.png" alt="" class="brand-img">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="agency-item">
-              <img loading="lazy" src="assets/imgs/fundingAgencies_5.png" alt="" class="brand-img">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="agency-item">
-              <img loading="lazy" src="assets/imgs/fundingAgencies_6.png" alt="" class="brand-img">
-            </div>
-          </div>
-
-        </div>
-
       </div>
-    </section>
-    <!-- End Partners Section -->
+
+  </section>
+  <!-- End clients Section -->
 
 
 
@@ -610,32 +592,9 @@
     <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
     <!-- Poppers -->
     <script src="./assets/js/popper.min.js"></script>
-
-    <!-- home Slider -->
-    <script>
-      $(document).ready(function () {
-        let isRtl2 = $('html[lang="ar"]').length > 0;
-        $(".home-slider").owlCarousel({
-          items: 1,
-          loop: true,
-          rtl: isRtl2 ? "rtl" : "ltr",
-          dots: true,
-          nav: false,
-          autoplay: true,
-          autoplayTimeout: 5000,
-          autoplaySpeed: 1500,
-          smartSpeed: 1500,
-          animateOut: "slideOutDown",
-          animateIn: "slideInDown",
-          nav: false,
-          navText: [
-            `<i class="fa-solid fa-arrow-up-long"></i>`,
-            `<i class="fa-solid fa-arrow-down-long"></i>`,
-          ],
-        });
-      });
-    </script>
-
+    <!-- Counter -->
+    <script src="./assets/plugins/countUp/waypoints.js"></script>
+    <script src="./assets/plugins/countUp/jquery.countup.min.js"></script>
     <!-- Main Js -->
     <script src="./assets/js/main.js"></script>
   </body>

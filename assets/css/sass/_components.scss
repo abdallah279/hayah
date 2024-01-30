@@ -823,6 +823,10 @@
   @media screen and (max-width: $screen-xs) {
     font-size: 16px;
   }
+
+  &.sm {
+    font-size: 16px;
+  }
 }
 
 .main_text{
@@ -1743,7 +1747,7 @@
   .input-me {
     width: 100%;
     min-height: 48px;
-    border-radius: 12px;
+    border-radius: 7px;
     padding: 0 12px;
     outline: none;
     border: none;
@@ -1767,13 +1771,13 @@
 
     &::placeholder {
       font-size: 13px;
-      color: $main;
+      color: $text-color;
       transition: $main-transition;
     }
 
     &:focus {
       // border-color: $black;
-      background-color: $sec;
+      border-color: $sec;
 
       &::placeholder {
         opacity: 0;
