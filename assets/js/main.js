@@ -3,6 +3,18 @@ $(window).on("load", function () {
   $(".loader").delay(300).fadeOut(1000);
 });
 
+// Aos
+aos_init();
+
+function aos_init() {
+  AOS.init({
+    duration: 700,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false
+  });
+}
+
 // Header Fixed
 let scrollToTop = document.querySelector('.scrollToTop');
 // header.classList.toggle('scroll', window.scrollY > 48);
@@ -170,5 +182,4 @@ $(document).ready(function(){
   })
 });
 
-new WOW().init();
 
