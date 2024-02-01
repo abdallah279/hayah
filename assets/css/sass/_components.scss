@@ -142,6 +142,52 @@
   }
 }
 
+// Whatsapp
+.floating-button {
+  position: relative;
+  @include circle(42px);
+  background-color: #25d366;
+  color: white;
+  @include center;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 11;
+  &:hover {
+    background-color: #25d366;
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid #58ea00;
+    left: -7px;
+    right: -7px;
+    top: -7px;
+    bottom: -7px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+  }
+  &:after {
+    animation-delay: .5s;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
 // Search
 .main-search {
   width: 500px;
@@ -787,13 +833,13 @@
 
 .main-title {
   color: $black;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
   position: relative;
   width: fit-content;
+  font-family: fontDemi;
 
   @media screen and (max-width: $screen-xs) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   &::before,
@@ -802,7 +848,7 @@
     position: absolute;
     height: 3px;
     background-color: $main;
-    bottom: -8px;
+    bottom: -10px;
     border-radius: 15px;
   }
 

@@ -141,9 +141,10 @@
   display: flex;
   align-items: center;
   gap: 60px;
-
+  
   @media screen and (max-width: $screen-lg) {
     flex-direction: column;
+    gap: 45px;
   }
 
   .about-img {
@@ -158,6 +159,7 @@
     @media screen and (max-width: $screen-xs) {
       width: 315px;
       height: 380px;
+      border-width: 3px;
     }
 
     @media screen and (max-width: $screen-xxs) {
@@ -175,6 +177,10 @@
       border: 6px solid $main;
       z-index: -1;
       border-radius: 7px;
+
+      @media screen and (max-width: $screen-xs) {
+        border-width: 3px;
+      }
     }
 
     .img {
@@ -226,10 +232,10 @@
     overflow: hidden;
     padding: 25px 20px;
     border: 1px solid #e8e7e7;
-    transition: $main-transition;
     display: flex;
     align-items: start;
     gap: 15px;
+    transition: $main-transition !important;
 
     @media screen and (max-width: $screen-md) {
       padding: 25px 15px;
@@ -239,7 +245,7 @@
     .title {
       font-size: 17px;
       margin-bottom: 12px;
-      color: #202020;
+      color: $black;
       font-family: fontDemi;
 
       @media screen and (max-width: $screen-xs) {
@@ -323,6 +329,10 @@
 
   .services_con {
     height: 200px;
+
+    @media screen and (max-width: $screen-xs) {
+      height: 175px;
+    }
   }
 
   .service-content {
@@ -395,7 +405,176 @@
 
 /********************* End services-card section *********************/
 
+/********************* Start service-detailes section *********************/
+.service-detailes {
+  .content {
+    display: flex;
+    gap: 60px;
+
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column !important;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .deatiles-slider {
+      width: 380px;
+      position: relative;
+      flex-shrink: 0;
+
+      @media screen and (max-width: $screen-xs) {
+        width: 320px;
+      }
+
+      @media screen and (max-width: $screen-xxs) {
+        width: 270px;
+      }
+
+      &::before, &::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        transition: $main-transition;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $main;
+        pointer-events: none;
+        border-radius: 5px;
+      }
+
+      &::before {
+        top: 15px;
+        @include dir-right(15px);
+      }
+
+      &::after {
+        top: -15px;
+        @include dir-left(15px);
+      }
+
+      .item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        .img {
+          height: 320px;
+          width: 100%;
+          object-fit: cover;
+
+          @media screen and (max-width: $screen-xxs) {
+            height: 280px;
+          }
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          z-index: 2;
+          top: 0;
+          left: 0;
+          transition: $main-transition;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color: #000000, $alpha: 0.3);
+        }
+
+        .fancybox-img {
+          background-color: #f9f9f9;
+          width: 42px;
+          height: 42px;
+          @include center;
+          color: $main;
+          font-size: 15px;
+          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+          position: absolute;
+          top: 15px;
+          @include dir-right(15px);
+          z-index: 6;
+          border-radius: 5px;
+        }
+      }
+
+      .owl-nav {
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 7px;
+        .owl-next,
+        .owl-prev {
+          width: 40px;
+          height: 40px;
+          @include center;
+          border: 1px solid $main !important;
+          background-color: $white !important;
+          color: $main !important;
+          font-size: 14px !important;
+          transition: $main-transition;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: $main !important;
+            color: $white !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.previous-item {
+    .content {
+
+      @media screen and (max-width: $screen-lg) {
+        gap: 40px;
+      }
+
+      .deatiles-slider {
+        .owl-nav{
+          // display: none !important;
+          top: -17px;
+          bottom: unset;
+        }
+        &::after,
+        &::before {
+          display: none;
+        }
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+        border: 1px solid $main;
+        padding: 10px;
+        background-color: $white;
+
+        .item {
+          .fancybox-img {
+            background-color: $main;
+            color: $white;
+            border-radius: 50%;
+            bottom: 15px;
+            top: unset;
+            @include dir-left(15px !important);
+            @include dir-right(unset !important);
+          }
+        }
+      }
+
+      .service-det {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(even){
+      .content{
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+/********************* End service-detailes section *********************/
+
 /********************* Start client-item section *********************/
+
 .client-item {
   border-radius: 8px;
   background-color: $white;
@@ -421,6 +600,7 @@
     }
   }
 }
+
 /********************* End client-item section *********************/
 
 /********************* Start Team section *********************/
@@ -608,6 +788,7 @@
 /********************* End Contact section *********************/
 
 /********************* page title *********************/
+
 .page-title {
   position: relative;
   height: 200px;
@@ -652,6 +833,7 @@
 }
 
 /********************* breadcrumb *********************/
+
 .breadcrumb-con {
   display: flex;
   align-items: center;
@@ -834,7 +1016,6 @@
     gap: 30px;
 
     @media screen and (max-width: $screen-sm) {
-      //   justify-content: start;
       gap: 20px;
     }
 
@@ -853,7 +1034,7 @@
         margin-bottom: 10px;
 
         @media screen and (max-width: $screen-sm) {
-          font-size: 28px;
+          font-size: 25px;
         }
       }
 
@@ -861,7 +1042,7 @@
         font-size: 17px;
 
         @media screen and (max-width: $screen-sm) {
-          font-size: 17px;
+          font-size: 15px;
         }
       }
     }
@@ -889,8 +1070,12 @@
       border: 1px solid rgba($color: #000000, $alpha: 0.1);
       background-color: rgba($color: $main, $alpha: 0.02);
 
-      @media screen and (max-width: $screen-xs) {
+      @media screen and (max-width: $screen-xxs) {
         min-width: 165px;
+      }
+
+      @media screen and (max-width: $screen-xs) {
+        min-width: 100%;
       }
 
       .icon {
@@ -909,6 +1094,10 @@
         font-size: 14px;
         color: $black;
         transition: $main-transition;
+
+        @media screen and (max-width: $screen-xxs) {
+          font-size: 13px;
+        }
       }
 
       &:hover {
@@ -950,17 +1139,29 @@
     color: $black;
     margin-bottom: 12px;
     font-family: fontDemi;
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 14px;
+    }
   }
 
   .time-name {
     font-size: 15px;
     color: $main;
     margin-bottom: 12px;
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 14px;
+    }
   }
 
   .time-num {
     font-size: 14px;
     color: $black;
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 13px;
+    }
   }
 }
 

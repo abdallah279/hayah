@@ -164,4 +164,46 @@ $(document).ready(function () {
       },
     },
   });
+
+  /************ deatiles Carousel ***********/
+  $(".deatiles-slider").owlCarousel({
+    items: 1,
+    rtl: isRtl,
+    autoplaySpeed: 3000,
+    autoplayTimeout: 5000,
+    smartSpeed: 2000,
+    autoplayHoverPause: false,
+    margin: 10,
+    loop: true,
+    dots: false,
+    nav: true,
+    autoplay: true,
+    navText: [
+      `<i class="fa-solid fa-arrow-right-long"></i>`,
+      `<i class="fa-solid fa-arrow-left-long"></i>`,
+    ],
+  });
+
+  /************ Services Carousel ***********/
+  $(".services-slider").owlCarousel({
+    items: 1,
+    rtl: isRtl,
+    autoplaySpeed: 3000,
+    autoplayTimeout: 5000,
+    smartSpeed: 2000,
+    autoplayHoverPause: false,
+    margin: 25,
+    loop: true,
+    dots: false,
+    autoplay: true,
+    nav: false,
+    responsive: {
+      991: {
+        items: 3,
+      },
+      560: {
+        items: 2,
+      },
+    },
+  });
 })

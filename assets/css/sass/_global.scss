@@ -96,10 +96,10 @@ input {
   }
 }
 
-section{
-  overflow-x: hidden;
-  overflow-y: clip;
-}
+// section{
+//   overflow-x: hidden;
+//   overflow-y: clip;
+// }
 
 select {
   appearance: none;
@@ -113,6 +113,18 @@ textarea {
 
 i {
   line-height: initial;
+
+  &.fa-arrow-left-long{
+    #{$ltr} & {
+      transform: scaleX(-1);
+    }
+  }
+
+  &.fa-arrow-right-long{
+    #{$ltr} & {
+      transform: scaleX(-1);
+    }
+  }
 }
 
 p {

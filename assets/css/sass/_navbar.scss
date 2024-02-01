@@ -131,6 +131,12 @@
           border-radius: 5px;
           background-color: $main;
           transition: $main-transition;
+
+          @media screen and (max-width:$screen-lg) {
+            height: 100%;
+            background-color: #f9f9f9;
+            z-index: -1;
+          }
         }
 
         &.dropdown-m-container{
@@ -141,7 +147,8 @@
 
         @media screen and (max-width:$screen-lg) {
           width: 100%;
-          padding: 5px;
+          padding: 5px 12px;
+          font-size: 14px;
         }
 
         i{
@@ -152,7 +159,7 @@
           margin-left: 0;
         }
 
-        &:hover {
+        &:hover, &.active {
           color: $main;
           .nav-dropdown {
             opacity: 1;
@@ -189,18 +196,10 @@
       align-items: center;
       gap: 15px;
 
-      @media screen and (min-width: $screen-lg) and (max-width: $screen-lg2) {
-        gap: 8px;
-      }
-
-      @media screen and (max-width: $screen-xs) {
-        gap: 8px;
-      }
-
       .nav-ic {
         @include circle(42px);
         @include center;
-        background-color: $light4 !important;
+        background-color: #f4f4f4 !important;
         cursor: pointer;
         position: relative;
 
@@ -219,7 +218,7 @@
         .ic {
           max-width: 20px;
           max-height: 20px;
-          font-size: 16px;
+          font-size: 14px;
           // color: $black;
         }
       }
