@@ -141,7 +141,7 @@
   display: flex;
   align-items: center;
   gap: 60px;
-  
+
   @media screen and (max-width: $screen-lg) {
     flex-direction: column;
     gap: 45px;
@@ -364,7 +364,7 @@
       font-family: fontDemi;
 
       @media screen and (max-width: $screen-xs) {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
 
@@ -380,6 +380,7 @@
       @media screen and (max-width: $screen-xs) {
         height: 70px;
         font-size: 13px;
+        height: auto;
       }
     }
   }
@@ -430,7 +431,8 @@
         width: 270px;
       }
 
-      &::before, &::after {
+      &::before,
+      &::after {
         position: absolute;
         content: "";
         z-index: -1;
@@ -513,6 +515,12 @@
           font-size: 14px !important;
           transition: $main-transition;
           border-radius: 5px;
+          
+          @media screen and (max-width: $screen-xxs) {
+            width: 35px;
+            height: 35px;
+            font-size: 12px !important;
+          }
 
           &:hover {
             background-color: $main !important;
@@ -525,13 +533,12 @@
 
   &.previous-item {
     .content {
-
       @media screen and (max-width: $screen-lg) {
         gap: 40px;
       }
 
       .deatiles-slider {
-        .owl-nav{
+        .owl-nav {
           // display: none !important;
           top: -17px;
           bottom: unset;
@@ -563,8 +570,8 @@
       }
     }
 
-    &:nth-child(even){
-      .content{
+    &:nth-child(even) {
+      .content {
         flex-direction: row-reverse;
       }
     }
@@ -1114,7 +1121,7 @@
   padding: 25px 15px;
   border-radius: 8px;
   border: 1px solid rgba($color: #000000, $alpha: 0.1);
-      background-color: rgba($color: $main, $alpha: 0.02);
+  background-color: rgba($color: $main, $alpha: 0.02);
 
   .top {
     display: flex;
