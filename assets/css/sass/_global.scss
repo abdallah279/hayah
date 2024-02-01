@@ -114,13 +114,7 @@ textarea {
 i {
   line-height: initial;
 
-  &.fa-arrow-left-long{
-    #{$ltr} & {
-      transform: scaleX(-1);
-    }
-  }
-
-  &.fa-arrow-right-long{
+  &.fa-arrow-left-long, &.fa-arrow-right-long, &.fa-angles-left, &.fa-angles-right{
     #{$ltr} & {
       transform: scaleX(-1);
     }

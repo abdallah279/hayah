@@ -130,10 +130,7 @@ textarea {
 i {
   line-height: initial;
 }
-html[lang=en] i.fa-arrow-left-long {
-  transform: scaleX(-1);
-}
-html[lang=en] i.fa-arrow-right-long {
+html[lang=en] i.fa-arrow-left-long, html[lang=en] i.fa-arrow-right-long, html[lang=en] i.fa-angles-left, html[lang=en] i.fa-angles-right {
   transform: scaleX(-1);
 }
 
@@ -392,16 +389,13 @@ html[lang=ar] .scrollToTop {
   width: 42px;
   height: 42px;
   background-color: #25d366;
-  color: white;
+  color: white !important;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
   cursor: pointer;
   z-index: 11;
-}
-.floating-button:hover {
-  background-color: #25d366;
 }
 .floating-button:before, .floating-button:after {
   content: "";
@@ -845,248 +839,6 @@ html[lang=ar] .nav-collapse .collapse-content::after {
 }
 .nav-collapse.active .drop-link i {
   transform: rotate(-180deg);
-}
-
-/********************* Tabs *********************/
-.nav-pills {
-  border: none !important;
-  justify-content: center;
-  gap: 12px;
-}
-@media screen and (max-width: 425px) {
-  .nav-pills {
-    gap: 7px;
-  }
-}
-.nav-pills .nav-link {
-  transition: all 0.31s ease-in-out;
-  background-color: #fff;
-  color: #202020;
-  font-size: 14px;
-  border-radius: 5px;
-  min-height: 44px;
-  min-width: 130px;
-}
-.nav-pills .nav-link.active {
-  background-color: #08B0DD;
-  color: #fff;
-}
-
-.tabs {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.tabs .tab {
-  background-color: transparent;
-  font-size: 15px;
-  color: #202020;
-  padding: 10px 12px;
-  border-radius: 5px;
-  transition: all 0.31s ease-in-out;
-}
-.tabs .tab:hover {
-  color: #08B0DD;
-}
-.tabs .tab.active {
-  background-color: #08B0DD;
-  color: #fff;
-}
-
-/********************* steps *********************/
-.steps {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 10;
-}
-.steps .step-item {
-  min-width: 180px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-}
-@media screen and (max-width: 576px) {
-  .steps .step-item {
-    min-width: 105px;
-  }
-}
-@media screen and (max-width: 425px) {
-  .steps .step-item {
-    min-width: 95px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .steps .step-item {
-    min-width: 82px;
-  }
-}
-.steps .step-item + .step-item:after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  width: 100%;
-  border: 1px dashed #08B0DD;
-  z-index: -10;
-}
-html[lang=en] .steps .step-item + .step-item:after {
-  left: 0;
-}
-html[lang=ar] .steps .step-item + .step-item:after {
-  right: 0;
-}
-html[lang=en] .steps .step-item + .step-item:after {
-  transform: translateX(-50%);
-}
-html[lang=ar] .steps .step-item + .step-item:after {
-  transform: translateX(50%);
-}
-.steps .step-item .progress-count {
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-  background-color: #fff;
-  border: 2px solid #7EA8D0;
-}
-.steps .step-item .progress-label {
-  font-size: 15px;
-  margin-top: 14px;
-  color: #272727;
-  font-family: fontMed;
-}
-@media screen and (max-width: 576px) {
-  .steps .step-item .progress-label {
-    font-size: 13px;
-  }
-}
-@media screen and (max-width: 425px) {
-  .steps .step-item .progress-label {
-    font-size: 12px;
-  }
-}
-.steps .step-item.active .progress-count {
-  outline: 3px solid rgba(8, 176, 221, 0.2);
-  background-color: #08B0DD;
-  border: none;
-}
-.steps .step-item.active .progress-label {
-  font-family: fontDemi;
-  color: #202020;
-}
-
-/********************* page title *********************/
-.page-title {
-  position: relative;
-  height: 200px;
-  padding: 30px 0;
-}
-@media screen and (max-width: 425px) {
-  .page-title {
-    height: 140px;
-    padding: 20px 0;
-  }
-}
-.page-title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
-.page-title .page_bg {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-}
-.page-title .container {
-  height: 100%;
-}
-.page-title .content {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: end;
-}
-
-/********************* breadcrumb *********************/
-.breadcrumb-con {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.breadcrumb-con .breadcrumb-m {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 18px;
-  color: #fff;
-}
-@media screen and (max-width: 425px) {
-  .breadcrumb-con .breadcrumb-m {
-    font-size: 16px;
-  }
-}
-.breadcrumb-con .breadcrumb-m.active {
-  color: #fff;
-}
-.breadcrumb-con .breadcrumb-m i {
-  font-size: 15px;
-}
-
-/********************* iti__selected-flag *************/
-.iti {
-  width: 100%;
-}
-.iti .iti__selected-flag {
-  width: 100px;
-  justify-content: center;
-  min-height: 48px;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #08B0DD;
-  transition: all 0.3s ease;
-  border: 1px solid #d5d5d5;
-  background-color: transparent !important;
-}
-@media screen and (max-width: 425px) {
-  .iti .iti__selected-flag {
-    min-height: 44px;
-  }
-}
-.iti .iti__selected-flag .iti__selected-dial-code {
-  margin: 8px;
-}
-html[lang=en] .iti .iti__country-list {
-  right: 0;
-}
-html[lang=ar] .iti .iti__country-list {
-  left: 0;
-}
-
-html[lang=en] .iti--allow-dropdown .iti__flag-container,
-html[lang=en] .iti--separate-dial-code .iti__flag-container {
-  right: 0 !important;
-  left: unset;
-}
-html[lang=ar] .iti--allow-dropdown .iti__flag-container,
-html[lang=ar] .iti--separate-dial-code .iti__flag-container {
-  left: 0;
-  right: unset !important;
 }
 
 /********************* Titles *********************/
@@ -2337,6 +2089,11 @@ html[lang=ar] .dropdown-menu.drop-filter.show {
   font-size: 14px;
   color: #fff;
 }
+@media screen and (max-width: 425px) {
+  .dropdown-toggle .drop-text {
+    font-size: 12px;
+  }
+}
 .dropdown-toggle .drop-ic {
   max-width: 32px;
   max-height: 18px;
@@ -2626,7 +2383,7 @@ html[lang=ar] .page-navbar .navbar-content .nav-icons .nav-ic.bell::after {
 .page-navbar .navbar-content .nav-icons .nav-ic .ic {
   max-width: 20px;
   max-height: 20px;
-  font-size: 14px;
+  font-size: 13px;
 }
 .page-navbar .navbar-content .nav-icons .side-open {
   display: none;
@@ -3170,9 +2927,9 @@ html[lang=ar] .about-content .about-img::after {
     width: 320px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 350px) {
   .service-detailes .content .deatiles-slider {
-    width: 270px;
+    width: 280px;
   }
 }
 .service-detailes .content .deatiles-slider::before, .service-detailes .content .deatiles-slider::after {
@@ -3515,8 +3272,9 @@ html[lang=ar] .service-detailes.previous-item .content .deatiles-slider .item .f
 }
 @media screen and (max-width: 576px) {
   .contact-box .ic {
-    width: 50px;
-    height: 50px;
+    width: 47px;
+    height: 47px;
+    font-size: 13px;
   }
 }
 .contact-box .box-content .name {
@@ -3527,7 +3285,7 @@ html[lang=ar] .service-detailes.previous-item .content .deatiles-slider .item .f
 }
 @media screen and (max-width: 425px) {
   .contact-box .box-content .name {
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 6px;
   }
 }
@@ -3538,7 +3296,7 @@ html[lang=ar] .service-detailes.previous-item .content .deatiles-slider .item .f
 }
 @media screen and (max-width: 425px) {
   .contact-box .box-content .desc {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -3859,7 +3617,6 @@ html[lang=ar] .video-card .video-info .video-icon {
   gap: 12px;
 }
 .location .map-icon {
-  margin-bottom: 12px;
   border-radius: 50%;
   width: 42px;
   height: 42px;
@@ -3875,7 +3632,6 @@ html[lang=ar] .video-card .video-info .video-icon {
 .location .name {
   font-size: 15px;
   color: #202020;
-  margin-bottom: 12px;
   font-family: fontDemi;
 }
 @media screen and (max-width: 425px) {
@@ -3896,6 +3652,26 @@ html[lang=ar] .video-card .video-info .video-icon {
 .location .time-num {
   font-size: 14px;
   color: #202020;
+  padding: 0 12px;
+}
+.location .time-num .link {
+  color: #202020;
+  gap: 7px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.location .time-num .link .ic {
+  font-size: 11px;
+}
+.location .time-num .link:hover {
+  color: #08B0DD;
+}
+html[lang=en] .location .time-num .link:hover {
+  transform: translateX(5px);
+}
+html[lang=ar] .location .time-num .link:hover {
+  transform: translateX(-5px);
 }
 @media screen and (max-width: 425px) {
   .location .time-num {

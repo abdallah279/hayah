@@ -427,8 +427,8 @@
         width: 320px;
       }
 
-      @media screen and (max-width: $screen-xxs) {
-        width: 270px;
+      @media screen and (max-width: 350px) {
+        width: 280px;
       }
 
       &::before,
@@ -515,7 +515,7 @@
           font-size: 14px !important;
           transition: $main-transition;
           border-radius: 5px;
-          
+
           @media screen and (max-width: $screen-xxs) {
             width: 35px;
             height: 35px;
@@ -539,7 +539,6 @@
 
       .deatiles-slider {
         .owl-nav {
-          // display: none !important;
           top: -17px;
           bottom: unset;
         }
@@ -762,8 +761,9 @@
     border-radius: 10px;
 
     @media screen and (max-width: $screen-sm) {
-      width: 50px;
-      height: 50px;
+      width: 47px;
+      height: 47px;
+      font-size: 13px;
     }
   }
 
@@ -775,7 +775,7 @@
       line-height: 1.4;
 
       @media screen and (max-width: $screen-xs) {
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 6px;
       }
     }
@@ -786,7 +786,7 @@
       line-height: 1.5;
 
       @media screen and (max-width: $screen-xs) {
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -1130,7 +1130,6 @@
   }
 
   .map-icon {
-    margin-bottom: 12px;
     @include circle(42px);
     @include center;
     background-color: $main;
@@ -1144,7 +1143,6 @@
   .name {
     font-size: 15px;
     color: $black;
-    margin-bottom: 12px;
     font-family: fontDemi;
 
     @media screen and (max-width: $screen-xs) {
@@ -1165,6 +1163,28 @@
   .time-num {
     font-size: 14px;
     color: $black;
+    padding: 0 12px;
+
+    .link {
+      color: $black;
+      gap: 7px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 7px;
+      .ic {
+        font-size: 11px;
+      }
+
+      &:hover {
+        #{$ltr} & {
+          transform: translateX(5px);
+        }
+        #{$rtl} & {
+          transform: translateX(-5px);
+        }
+        color: $main;
+      }
+    }
 
     @media screen and (max-width: $screen-xs) {
       font-size: 13px;
