@@ -2611,12 +2611,17 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 12px;
+}
+html[lang=en] .home-sec .owl-dots {
+  right: 120px;
+}
+html[lang=ar] .home-sec .owl-dots {
+  left: 120px;
 }
 @media screen and (max-width: 768px) {
   .home-sec .owl-dots {
@@ -2726,13 +2731,16 @@ html[lang=ar] .about-content .about-img::after {
 
 /********************* End About section *********************/
 /********************* Start Features section *********************/
+.Features-sec .content_con {
+  padding: 40px;
+  border-radius: 15px;
+  background-color: rgba(8, 176, 221, 0.06);
+}
+
 .Features_cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 24px 20px;
-  padding: 40px;
-  border-radius: 15px;
-  background-color: rgba(8, 176, 221, 0.06);
 }
 @media screen and (max-width: 768px) {
   .Features_cards {
@@ -2760,7 +2768,7 @@ html[lang=ar] .about-content .about-img::after {
   }
 }
 .Features_cards .Feature_card .title {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 12px;
   color: #202020;
   font-family: fontDemi;
@@ -2793,7 +2801,7 @@ html[lang=ar] .about-content .about-img::after {
 }
 
 .card_icon {
-  font-size: 20px;
+  font-size: 17px;
   flex-shrink: 0;
   background-color: #f9f9f9;
   color: #08B0DD;

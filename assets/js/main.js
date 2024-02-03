@@ -15,6 +15,21 @@ function aos_init() {
   });
 }
 
+// Check local Storage Lang
+const localLang = localStorage.getItem('lang');
+if(localLang){
+  $('html').attr('lang', localLang);
+}
+
+// toggle Lang
+$('.toggleLang').on('click', function(e){
+  e.preventDefault();
+  let lang = $(this).data('lang');
+  location.reload();
+  localStorage.setItem("lang", lang);
+});
+
+
 // Header Fixed
 let scrollToTop = document.querySelector(".scrollToTop");
 // header.classList.toggle('scroll', window.scrollY > 48);
@@ -94,27 +109,17 @@ function showPassword(input, icon) {
   icon.classList.toggle("show");
 }
 
-let isRtl = $('html[lang="ar"]').length > 0;
-
-// Normal Select To
-$(".select").select2({
-  dir: isRtl ? "rtl" : "ltr",
-  minimumResultsForSearch: Infinity,
-});
-
-$(".num").countUp();
-
 
 /******************* All Sliders *******************/
 
 $(document).ready(function () {
+  let isRtl = $('html[lang="ar"]').length > 0;
   // Home Slider
   $(document).ready(function () {
-    let isRtl2 = $('html[lang="ar"]').length > 0;
     $(".home-slider").owlCarousel({
       items: 1,
       loop: true,
-      rtl: isRtl2 ? "rtl" : "ltr",
+      rtl: isRtl ? true : false,
       dots: true,
       nav: false,
       autoplay: true,
@@ -207,3 +212,5 @@ $(document).ready(function () {
     },
   });
 })
+
+$(".num").countUp();
