@@ -220,6 +220,10 @@
     padding: 40px;
     border-radius: 15px;
     background-color: rgba($color: $main, $alpha: 0.06);
+
+    @media screen and (max-width: $screen-md) {
+      padding: 20px 15px;
+    }
   }
 }
 .Features_cards {
@@ -227,7 +231,6 @@
 
   @media screen and (max-width: $screen-md) {
     @include grid(300px, 20px);
-    padding: 20px 15px;
   }
 
   .Feature_card {
@@ -332,10 +335,10 @@
   }
 
   .services_con {
-    height: 200px;
+    height: 245px;
 
     @media screen and (max-width: $screen-xs) {
-      height: 175px;
+      height: auto;
     }
   }
 
@@ -376,10 +379,10 @@
       font-size: 14px;
       margin-bottom: 14px;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      height: 80px;
+      height: 135px;
 
       @media screen and (max-width: $screen-xs) {
         height: 70px;
@@ -591,6 +594,7 @@
   @include center;
   box-shadow: $main-shadow;
   height: 120px;
+  font-size: 16px;
 
   .brand-img {
     max-width: 100px;
@@ -602,6 +606,7 @@
       max-width: 85px;
     }
   }
+  
 
   &:hover {
     .brand-img {

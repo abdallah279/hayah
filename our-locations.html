@@ -64,7 +64,8 @@
           <div class="dropdown">
             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-solid fa-globe drop-ic"></i>
-              <span class="lang drop-text">العربية</span>
+              <span class="lang drop-text show_lang" data-lang='ar'>العربية</span>
+              <span class="lang drop-text show_lang" data-lang='en'>English</span>
               <i class="fa-solid fa-angle-down drop-ic"></i>
             </button>
 
@@ -84,8 +85,8 @@
     <!-- End Header -->
 
 
-    <!-- Start Navbar -->
-    <nav class="page-navbar">
+    <!-- Start Arbic Navbar -->
+    <nav class="page-navbar show_lang" data-lang='ar'>
       <div class="container">
         <div class="navbar-content">
 
@@ -101,19 +102,7 @@
             <a href="index.html" class="link active">الرئيسية</a>
             <a href="about-us.html" class="link active">من نحن</a>
 
-            <div class="dropdown-m-container link">
-              <a href='our-services.html'>خدماتنا</a>
-
-              <i class="fa-solid fa-chevron-down"></i>
-
-              <div class="nav-dropdown dropdown-m">
-                <a href="service-details.html" class='drop-link'>دورات خاصة</a>
-                <a href="service-details.html" class='drop-link'>دورات للأطفال</a>
-                <a href="service-details.html" class='drop-link'>دورات خاصة</a>
-                <a href="service-details.html" class='drop-link'>دورات للأطفال</a>
-              </div>
-
-            </div>
+            <a href='our-services.html' class="link">خدماتنا</a>
 
             <a href="our-locations.html" class="link">فروعنا</a>
 
@@ -136,7 +125,7 @@
 
           <div class="nav-icons">
 
-            <a href='http://wa.me/01011111111' target="_blank" class="floating-button">
+            <a href='http://wa.me/+971505858350' target="_blank" class="floating-button">
               <i class="fa-brands fa-whatsapp icon wa"></i>
             </a>
 
@@ -150,18 +139,83 @@
         </div>
       </div>
     </nav>
-    <!-- End Navbar -->
+    <!-- End Arbic Navbar -->
+
+
+    <!-- Start English Navbar -->
+    <nav class="page-navbar show_lang" data-lang='en'>
+      <div class="container">
+        <div class="navbar-content">
+
+          <a href="index.html" class="logo">
+            <img src="./assets/imgs/logo.png" alt="" class="logo-img">
+          </a>
+
+          <div class="links">
+            <a href="index.html" class="logo">
+              <img src="./assets/imgs/logo.png" alt="logo">
+            </a>
+
+            <a href="index.html" class="link active">Home</a>
+            <a href="about-us.html" class="link">About Us</a>
+            <a href='our-services.html' class="link">Our Services</a>
+
+            <a href="our-locations.html" class="link">Branches</a>
+
+            <a href="programs.html" class="link">Our Programs</a>
+
+            <div class="dropdown-m-container link">
+              Labirary
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+              <div class="nav-dropdown dropdown-m">
+                <a href="video-library.html" class='drop-link'>Video Library</a>
+                <a href="images-library.html" class='drop-link'>Photo Library</a>
+              </div>
+
+            </div>
+
+            <a href="contact-us.html" class="link">Contact Us</a>
+          </div>
+
+          <div class="nav-icons">
+
+            <a href='http://wa.me/+971505858350' target="_blank" class="floating-button">
+              <i class="fa-brands fa-whatsapp icon wa"></i>
+            </a>
+
+            <div class="nav-ic side-open">
+              <i class="fa-solid fa-bars ic"></i>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </nav>
+    <!-- End English Navbar -->
 
     <!-- Start Page Header -->
     <section class="page-title">
       <img src="./assets/imgs/page.jpg" alt="" class="page_bg">
       <div class="container">
         <div class='content'>
-          <ul class="breadcrumb-con">
+
+          <ul class="breadcrumb-con show_lang" data-lang='ar'>
             <li class="breadcrumb-m"><a href="index.html"> <i class="fa-solid fa-house"></i> الرئيسية</a></li>
             <li class="breadcrumb-m">/</li>
             <li class="breadcrumb-m" aria-current="page">فروعنا</li>
           </ul>
+
+          <ul class="breadcrumb-con show_lang" data-lang='en'>
+            <li class="breadcrumb-m"><a href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="breadcrumb-m">/</li>
+            <li class="breadcrumb-m" aria-current="page">Our Locations</li>
+          </ul>
+
         </div>
       </div>
     </section>
@@ -169,51 +223,118 @@
 
 
     <!-- Start Locations Section -->
-    <section class="location-sec main-padding" id='contact'>
+    <section class="location-sec main-padding show_lang" data-lang='ar'>
       <div class="container">
 
         <div class="social-items">
 
-          <button type="button" class="item">
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.930905320127!2d55.28927770000001!3d25.0364188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f00020872e9%3A0x82bd161ff1408cc5!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1706922574121!5m2!1sar!2seg">
             <div class="icon">
               <i class="fa-solid fa-location-dot ic"></i>
             </div>
             <span class="text">فرع سرينا</span>
           </button>
 
-          <button type="button" class="item">
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.660578702683!2d55.2961015!3d25.0116469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100166899d3%3A0xbd6624185f2b6140!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002622425!5m2!1sar!2seg">
             <div class="icon">
               <i class="fa-solid fa-location-dot ic"></i>
             </div>
             <span class="text">فرع ميرا اويسس</span>
           </button>
 
-          <button type="button" class="item">
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9874844020696!2d55.2776572!3d25.034498799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f00257913df%3A0x9bce4bcd3c80cd7d!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002679853!5m2!1sar!2seg">
             <div class="icon">
               <i class="fa-solid fa-location-dot ic"></i>
             </div>
             <span class="text">فرع اربيان رانشز</span>
           </button>
 
-          <button type="button" class="item">
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.676179889352!2d55.263815799999996!3d25.011117000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100216a3d9b%3A0x5bc899e327393978!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002712742!5m2!1sar!2seg">
             <div class="icon">
               <i class="fa-solid fa-location-dot ic"></i>
             </div>
             <span class="text">فرع مدن</span>
           </button>
 
-          <button type="button" class="item">
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.979927720444!2d55.3000052!3d25.000798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100612b975f%3A0xa7c7331d7ddb167c!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002755000!5m2!1sar!2seg">
             <div class="icon">
               <i class="fa-solid fa-location-dot ic"></i>
             </div>
             <span class="text">فرع ميرا</span>
           </button>
 
-          <button type="button" class="item">
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.979927720444!2d55.3000052!3d25.000798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100612b975f%3A0xa7c7331d7ddb167c!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002784421!5m2!1sar!2seg">
             <div class="icon">
               <i class="fa-solid fa-location-dot ic"></i>
             </div>
             <span class="text">فرع تاون اسكوير</span>
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Locations Section -->
+
+
+    <!-- Start Locations Section -->
+    <section class="location-sec main-padding show_lang" data-lang='en'>
+      <div class="container">
+
+        <div class="social-items">
+
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.930905320127!2d55.28927770000001!3d25.0364188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f00020872e9%3A0x82bd161ff1408cc5!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1706922574121!5m2!1sar!2seg">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot ic"></i>
+            </div>
+            <span class="text">Serena Branch</span>
+          </button>
+
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.660578702683!2d55.2961015!3d25.0116469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100166899d3%3A0xbd6624185f2b6140!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002622425!5m2!1sar!2seg">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot ic"></i>
+            </div>
+            <span class="text">Mira Oasis Branch</span>
+          </button>
+
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9874844020696!2d55.2776572!3d25.034498799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f00257913df%3A0x9bce4bcd3c80cd7d!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002679853!5m2!1sar!2seg">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot ic"></i>
+            </div>
+            <span class="text">Arabian Ranches Branch</span>
+          </button>
+
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.676179889352!2d55.263815799999996!3d25.011117000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100216a3d9b%3A0x5bc899e327393978!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002712742!5m2!1sar!2seg">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot ic"></i>
+            </div>
+            <span class="text">Mudon Branch</span>
+          </button>
+
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.979927720444!2d55.3000052!3d25.000798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100612b975f%3A0xa7c7331d7ddb167c!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002755000!5m2!1sar!2seg">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot ic"></i>
+            </div>
+            <span class="text">Mira Branch</span>
+          </button>
+
+          <button type="button" class="item location_item"
+            data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.979927720444!2d55.3000052!3d25.000798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f7100612b975f%3A0xa7c7331d7ddb167c!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1707002784421!5m2!1sar!2seg">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot ic"></i>
+            </div>
+            <span class="text">Town Square Branch</span>
           </button>
 
         </div>
@@ -235,11 +356,13 @@
                 <div class="map-icon">
                   <i class="fa-solid fa-location-dot icon"></i>
                 </div>
-                <div class="name">فرع سرينا</div>
+                <div class="name locationName show_lang" data-lang='ar'>فرع سرينا</div>
+                <div class="name locationName show_lang" data-lang='en'>Serena Branch</div>
               </div>
 
               <div class="mb-4">
-                <div class="time-name">تواصل معنا</div>
+                <div class="time-name show_lang" data-lang='ar'>تواصل معنا</div>
+                <div class="time-name show_lang" data-lang='en'>Contact us</div>
                 <div class="time-num">
 
                   <a href="tel:+971505858350" target="_blank" class="link">
@@ -250,16 +373,23 @@
                 </div>
               </div>
 
-              <div>
+              <div class="show_lang" data-lang='ar'>
                 <div class="time-name">فترات الدوام</div>
-                <div class="time-num">من يوم السبت إلى الخميس: 9:00 صباحاً إلى 9:00 مساءاً</div>
+                <div class="time-num">من يوم السبت إلى الجمعه: 8:00 صباحاً إلى 10:00 مساءاً</div>
+              </div>
+
+              <div class="show_lang" data-lang='en'>
+                <div class="time-name">Working hours</div>
+                <div class="time-num">From Saturday to Friday: 8:00 am to 10:00 pm</div>
               </div>
 
             </div>
           </div>
 
           <div class="col-lg-8 col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.930905320127!2d55.28927770000001!3d25.0364188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f00020872e9%3A0x82bd161ff1408cc5!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1706922574121!5m2!1sar!2seg" class="map"></iframe>
+            <iframe id="mapLocation"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.930905320127!2d55.28927770000001!3d25.0364188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f00020872e9%3A0x82bd161ff1408cc5!2sHayah%20Sport%20Academy!5e0!3m2!1sar!2seg!4v1706922574121!5m2!1sar!2seg"
+              class="map"></iframe>
           </div>
 
         </div>
@@ -268,8 +398,8 @@
     <!-- End Map Section -->
 
 
-    <!-- Start Footer -->
-    <footer class="footer">
+    <!-- Start Arbic Footer -->
+    <footer class="footer show_lang" data-lang='ar'>
       <div class="container">
 
         <div class="row footer-cards gy-4">
@@ -281,8 +411,8 @@
               </a>
 
               <p class="footer-info">
-                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                يسعدنا ان نعلن اننا متاحين للحضور الي المسبح الذي يقع في المجمع او الكومباوند الذي تعيش فيه في الوقت
+                الذي يناسبك بشكل مثالي ممايجعل تجربتك التدريبيه مرنه وملائمه لجدولك
               </p>
             </div>
           </div>
@@ -293,7 +423,7 @@
               <ul class="footer-links">
 
                 <li class="foot-link">
-                  <a href="packages.html" class="link">
+                  <a href="index.html" class="link">
                     <i class="fa-solid fa-angles-left ic"></i>
                     <span> الرئيسية</span>
                   </a>
@@ -327,9 +457,9 @@
 
               <ul class="footer-links">
                 <li class="foot-link">
-                  <a href="tel:+966 55 932 2738" target="_blank" class="link">
+                  <a href="tel:+971505858350" target="_blank" class="link">
                     <i class="fa-solid fa-phone-flip ic"></i>
-                    <span> +966 55 932 2738</span>
+                    <span> +971505858350</span>
                   </a>
                 </li>
                 <li class="foot-link">
@@ -341,7 +471,7 @@
                 <li class="foot-link">
                   <div class="link not-pointer">
                     <i class="fa-regular fa-map ic"></i>
-                    <span>أكاديمية حياة لتعليم السباحة</span>
+                    <span>دبي - الإمارات العربية المتحدة</span>
                   </div>
                 </li>
               </ul>
@@ -355,12 +485,103 @@
     <!-- End Footer -->
 
 
+    <!-- Start English Footer -->
+    <footer class="footer show_lang" data-lang='en'>
+      <div class="container">
+
+        <div class="row footer-cards gy-4">
+
+          <div class="col-lg-4 col-md-12">
+            <div class="foot-content">
+              <a href="index.html">
+                <img src="assets/imgs/logo.png" alt="" class="foot-logo">
+              </a>
+
+              <p class="footer-info">
+                We are delighted to announce that we are available for attendance at the pool located within the complex or compound where you reside at a time that suits you perfectly. This makes your training experience flexible and tailored to your schedule
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="foot-content">
+              <h3 class="footer-head">Quick links</h3>
+              <ul class="footer-links">
+
+                <li class="foot-link">
+                  <a href="index.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span> Home</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="our-services.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span>Our Services</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="images-library.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span>Photo Library</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="contact-us.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span>Contact Us</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="foot-content">
+              <h3 class="footer-head">Contact Us</h3>
+
+              <ul class="footer-links">
+                <li class="foot-link">
+                  <a href="tel:+971505858350" target="_blank" class="link">
+                    <i class="fa-solid fa-phone-flip ic"></i>
+                    <span> +971505858350</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="mailto:example@gmail.com" target="_blank" class="link">
+                    <i class="fa-regular fa-envelope ic"></i>
+                    <span>example@gmail.com</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <div class="link not-pointer">
+                    <i class="fa-regular fa-map ic"></i>
+                    <span>Dubai United Arab Emirates</span>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <!-- End English Footer -->
+
+
     <!-- Start CopyRight -->
     <div class="copy-right">
       <div class="container">
-        <div class="copy-content">
+        <div class="copy-content show_lang" data-lang='ar'>
 
           جميع الحقوق محفوظة لأكاديمية حياة لتعليم السباحة © 2024
+
+        </div>
+        <div class="copy-content show_lang" data-lang='en'>
+
+          All rights reserved to Hayah Swimming Academy © 2024
 
         </div>
       </div>

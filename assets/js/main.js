@@ -16,9 +16,14 @@ function aos_init() {
 }
 
 // Check local Storage Lang
+$('.show_lang').hide();
 const localLang = localStorage.getItem('lang');
 if(localLang){
   $('html').attr('lang', localLang);
+  $(`.show_lang[data-lang=${localLang}]`).show();
+} else{
+  $('html').attr('lang', 'ar');
+  $('.show_lang[data-lang=ar]').show();
 }
 
 // toggle Lang
@@ -126,8 +131,6 @@ $(document).ready(function () {
       autoplayTimeout: 5000,
       autoplaySpeed: 1500,
       smartSpeed: 1500,
-      animateOut: "slideOutDown",
-      animateIn: "slideInDown",
       nav: false,
       navText: [
         `<i class="fa-solid fa-arrow-up-long"></i>`,
@@ -213,4 +216,14 @@ $(document).ready(function () {
   });
 })
 
-$(".num").countUp();
+if($('.num')){
+  $(".num").countUp();
+}
+
+// Get Location
+$('.location_item').on('click', function(){
+  let newLocation = $(this).data('location');
+  let name = $(this).find('.text').text();
+  $('.locationName').text(name);
+  $('#mapLocation').attr('src', newLocation);
+})

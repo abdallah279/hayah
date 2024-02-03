@@ -64,7 +64,8 @@
           <div class="dropdown">
             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-solid fa-globe drop-ic"></i>
-              <span class="lang drop-text">العربية</span>
+              <span class="lang drop-text show_lang" data-lang='ar'>العربية</span>
+              <span class="lang drop-text show_lang" data-lang='en'>English</span>
               <i class="fa-solid fa-angle-down drop-ic"></i>
             </button>
 
@@ -84,8 +85,8 @@
     <!-- End Header -->
 
 
-    <!-- Start Navbar -->
-    <nav class="page-navbar">
+    <!-- Start Arbic Navbar -->
+    <nav class="page-navbar show_lang" data-lang='ar'>
       <div class="container">
         <div class="navbar-content">
 
@@ -101,19 +102,7 @@
             <a href="index.html" class="link active">الرئيسية</a>
             <a href="about-us.html" class="link active">من نحن</a>
 
-            <div class="dropdown-m-container link">
-              <a href='our-services.html'>خدماتنا</a>
-
-              <i class="fa-solid fa-chevron-down"></i>
-
-              <div class="nav-dropdown dropdown-m">
-                <a href="service-details.html" class='drop-link'>دورات خاصة</a>
-                <a href="service-details.html" class='drop-link'>دورات للأطفال</a>
-                <a href="service-details.html" class='drop-link'>دورات خاصة</a>
-                <a href="service-details.html" class='drop-link'>دورات للأطفال</a>
-              </div>
-
-            </div>
+            <a href='our-services.html' class="link">خدماتنا</a>
 
             <a href="our-locations.html" class="link">فروعنا</a>
 
@@ -136,7 +125,7 @@
 
           <div class="nav-icons">
 
-            <a href='http://wa.me/01011111111' target="_blank" class="floating-button">
+            <a href='http://wa.me/+971505858350' target="_blank" class="floating-button">
               <i class="fa-brands fa-whatsapp icon wa"></i>
             </a>
 
@@ -150,7 +139,63 @@
         </div>
       </div>
     </nav>
-    <!-- End Navbar -->
+    <!-- End Arbic Navbar -->
+
+
+    <!-- Start English Navbar -->
+    <nav class="page-navbar show_lang" data-lang='en'>
+      <div class="container">
+        <div class="navbar-content">
+
+          <a href="index.html" class="logo">
+            <img src="./assets/imgs/logo.png" alt="" class="logo-img">
+          </a>
+
+          <div class="links">
+            <a href="index.html" class="logo">
+              <img src="./assets/imgs/logo.png" alt="logo">
+            </a>
+
+            <a href="index.html" class="link active">Home</a>
+            <a href="about-us.html" class="link">About Us</a>
+            <a href='our-services.html' class="link">Our Services</a>
+
+            <a href="our-locations.html" class="link">Branches</a>
+
+            <a href="programs.html" class="link">Our Programs</a>
+
+            <div class="dropdown-m-container link">
+              Labirary
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+              <div class="nav-dropdown dropdown-m">
+                <a href="video-library.html" class='drop-link'>Video Library</a>
+                <a href="images-library.html" class='drop-link'>Photo Library</a>
+              </div>
+
+            </div>
+
+            <a href="contact-us.html" class="link">Contact Us</a>
+          </div>
+
+          <div class="nav-icons">
+
+            <a href='http://wa.me/+971505858350' target="_blank" class="floating-button">
+              <i class="fa-brands fa-whatsapp icon wa"></i>
+            </a>
+
+            <div class="nav-ic side-open">
+              <i class="fa-solid fa-bars ic"></i>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </nav>
+    <!-- End English Navbar -->
 
 
     <!-- Start Home Section -->
@@ -161,13 +206,28 @@
         <div class="home-item">
           <img src="./assets/imgs/slider1.webp" alt="" class="home-img">
           <div class='container'>
-            <div class="content">
+
+            <!-- Arbic Content -->
+            <div class="content show_lang" data-lang='ar'>
               <h1 class="title" data-aos="fade-up" data-aos-delay="200">أكاديمية حياة الرياضية</h1>
               <p class='desc' data-aos="fade-up" data-aos-delay="300">
-                نحن أكاديمية رياضية رائدة تعمل على تعزيز روح المنافسة وتحمل المسؤولية نحو خدمة المجتمع والوطن. تأسست في العام 2015 في الإمارات العربية المتحدة، وقد تأسست على يد مدربين ذوي خبرة عالية في عالم الرياضة.
+                نحن أكاديمية رياضية رائدة تعمل على تعزيز روح المنافسة وتحمل المسؤولية نحو خدمة المجتمع والوطن. تأسست في
+                العام 2015 في الإمارات العربية المتحدة، وقد تأسست على يد مدربين ذوي خبرة عالية في عالم الرياضة.
               </p>
               <a href="about-us.html" class="main-btn up" data-aos="fade-up" data-aos-delay="350">عرض المزيد</a>
             </div>
+
+            <!-- English Content -->
+            <div class="content show_lang" data-lang='en'>
+              <h1 class="title" data-aos="fade-up" data-aos-delay="200">Hayah Sports Academy</h1>
+              <p class='desc' data-aos="fade-up" data-aos-delay="300">
+                We are a leading sports academy dedicated to fostering a competitive spirit and a sense of
+                responsibility towards serving the community and the nation. Founded in 2015 in the United Arab
+                Emirates, our academy was established by highly experienced coaches in the world of sports
+              </p>
+              <a href="about-us.html" class="main-btn up" data-aos="fade-up" data-aos-delay="350">More Details</a>
+            </div>
+
           </div>
         </div>
 
@@ -175,13 +235,28 @@
         <div class="home-item">
           <img src="./assets/imgs/slider2.webp" alt="" class="home-img">
           <div class='container'>
-            <div class="content">
+
+            <!-- Arbic Content -->
+            <div class="content show_lang" data-lang='ar'>
               <h1 class="title" data-aos="fade-up" data-aos-delay="200">أكاديمية حياة الرياضية</h1>
               <p class='desc' data-aos="fade-up" data-aos-delay="300">
-                نحن أكاديمية رياضية رائدة تعمل على تعزيز روح المنافسة وتحمل المسؤولية نحو خدمة المجتمع والوطن. تأسست في العام 2015 في الإمارات العربية المتحدة، وقد تأسست على يد مدربين ذوي خبرة عالية في عالم الرياضة.
+                نحن أكاديمية رياضية رائدة تعمل على تعزيز روح المنافسة وتحمل المسؤولية نحو خدمة المجتمع والوطن. تأسست في
+                العام 2015 في الإمارات العربية المتحدة، وقد تأسست على يد مدربين ذوي خبرة عالية في عالم الرياضة.
               </p>
               <a href="about-us.html" class="main-btn up" data-aos="fade-up" data-aos-delay="350">عرض المزيد</a>
             </div>
+
+            <!-- English Content -->
+            <div class="content show_lang" data-lang='en'>
+              <h1 class="title" data-aos="fade-up" data-aos-delay="200">Hayah Sports Academy</h1>
+              <p class='desc' data-aos="fade-up" data-aos-delay="300">
+                We are a leading sports academy dedicated to fostering a competitive spirit and a sense of
+                responsibility towards serving the community and the nation. Founded in 2015 in the United Arab
+                Emirates, our academy was established by highly experienced coaches in the world of sports
+              </p>
+              <a href="about-us.html" class="main-btn up" data-aos="fade-up" data-aos-delay="350">More Details</a>
+            </div>
+
           </div>
         </div>
 
@@ -199,17 +274,37 @@
             <img src="./assets/imgs/about1.jpeg" alt="" class="img">
           </div>
 
-          <div class="content">
+          <!-- Arbic Content -->
+          <div class="content show_lang" data-lang='ar'>
             <h4 class="main-title" data-aos="fade-up" data-aos-delay="200">
               عن أكاديمية حياة
               <span class="line"></span>
             </h4>
             <p class="text" data-aos="fade-up" data-aos-delay="300">
-              نحن أكاديمية رياضية رائدة تعمل على تعزيز روح المنافسة وتحمل المسؤولية نحو خدمة المجتمع والوطن. تأسست في العام 2015 في الإمارات العربية المتحدة، وقد تأسست على يد مدربين ذوي خبرة عالية في عالم الرياضة.
-              نحن نعقد فصولنا بشراكة مع المجتمع الذي يتميز بالروعة والفخامة في دبي. يمكننا توفير التدريب في مسابح الكومباوندات الخاصة بكم أينما كانت، والتي يعيش فيها مجتمعنا. نسعى لتوفير تجربة تدريب فريدة، حيث نعمل على توفير الوقت والجهد للأفراد،  مع إضافة مواعيد تناسب جدولكم ونحن فخورون بالعمل في بيئة متكاملة.
-              فيما يتعلق بموقعنا الرئيسي في أفضل حمام أولمبي داخلي في الشرق الأوسط، وهو مجمع حمدان الرياضي، نحن ملتزمون بتوفير بيئة تدريب ممتازة واختيار الوقت المثالي لكم، حتى تتمكنوا من الاستمتاع بتحسين مهاراتكم الرياضية بكل راحة ورفاهية.            
+              نحن أكاديمية رياضية رائدة تعمل على تعزيز روح المنافسة وتحمل المسؤولية نحو خدمة المجتمع والوطن. تأسست في
+              العام 2015 في الإمارات العربية المتحدة، وقد تأسست على يد مدربين ذوي خبرة عالية في عالم الرياضة.
+              نحن نعقد فصولنا بشراكة مع المجتمع الذي يتميز بالروعة والفخامة في دبي. يمكننا توفير التدريب في مسابح
+              الكومباوندات الخاصة بكم أينما كانت، والتي يعيش فيها مجتمعنا. نسعى لتوفير تجربة تدريب فريدة، حيث نعمل على
+              توفير الوقت والجهد للأفراد، مع إضافة مواعيد تناسب جدولكم ونحن فخورون بالعمل في بيئة متكاملة.
+              فيما يتعلق بموقعنا الرئيسي في أفضل حمام أولمبي داخلي في الشرق الأوسط، وهو مجمع حمدان الرياضي، نحن ملتزمون
+              بتوفير بيئة تدريب ممتازة واختيار الوقت المثالي لكم، حتى تتمكنوا من الاستمتاع بتحسين مهاراتكم الرياضية بكل
+              راحة ورفاهية.
             </p>
             <a href="contact-us.html" class="main-btn up" data-aos="fade-up" data-aos-delay="300">راسلنا</a>
+          </div>
+
+          <!-- English content -->
+          <div class="content show_lang" data-lang='en'>
+            <h4 class="main-title" data-aos="fade-up" data-aos-delay="200">
+              About Hayah Sports Academy
+              <span class="line"></span>
+            </h4>
+            <p class="text" data-aos="fade-up" data-aos-delay="300">
+              We are a leading sports academy dedicated to fostering a competitive spirit and a sense of responsibility
+              towards serving the community and the nation. Founded in 2015 in the United Arab Emirates, our academy was
+              established by highly experienced coaches in the world of sports
+            </p>
+            <a href="contact-us.html" class="main-btn up" data-aos="fade-up" data-aos-delay="300">contact us</a>
           </div>
 
         </div>
@@ -218,35 +313,37 @@
     <!-- End About Section -->
 
 
-    <!-- Start Features Section -->
-    <section class="Features-sec py-2">
+    <!-- Start Arbic Features Section -->
+    <section class="Features-sec py-2 show_lang" data-lang='ar'>
       <div class="container">
 
         <div class='content_con'>
-          <h2 class="main-title mx-auto mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">تحقق من اختيارك لنا</h2>
-  
+          <h2 class="main-title mx-auto mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">تحقق من
+            اختيارك لنا</h2>
+
           <div class="Features_cards">
-  
+
             <!-- Card -->
             <div class="Feature_card" data-aos="fade-up" data-aos-delay="100">
               <div class='card_icon'>
                 <i class="fa-solid fa-school"></i>
               </div>
-  
+
               <div class="content">
                 <h3 class="title">مدرسه فريده</h3>
                 <p class="desc">
-                  اكاديمية سباحه فريده تسعي لتحويل نهج تعليم السباحة للاطفال واولياء امورهم بغرض تقديم تجربه تعلم مبتكره ومحفزه.
+                  اكاديمية سباحه فريده تسعي لتحويل نهج تعليم السباحة للاطفال واولياء امورهم بغرض تقديم تجربه تعلم مبتكره
+                  ومحفزه.
                 </p>
               </div>
             </div>
-  
+
             <!-- Card -->
             <div class="Feature_card" data-aos="fade-up" data-aos-delay="200">
               <div class='card_icon'>
                 <i class="fa-solid fa-user-plus"></i>
               </div>
-  
+
               <div class="content">
                 <h3 class="title">تطوير الذات</h3>
                 <p class="desc">
@@ -254,13 +351,13 @@
                 </p>
               </div>
             </div>
-  
+
             <!-- Card -->
             <div class="Feature_card" data-aos="fade-up" data-aos-delay="300">
               <div class='card_icon'>
                 <i class="fa-solid fa-flag"></i>
               </div>
-  
+
               <div class="content">
                 <h3 class="title">الاساليب الحديثه</h3>
                 <p class="desc">
@@ -268,26 +365,88 @@
                 </p>
               </div>
             </div>
-  
+
           </div>
         </div>
       </div>
     </section>
-    <!-- End Features Section -->
+    <!-- End Arbic Features Section -->
 
 
-    <!-- Start Services Section -->
-    <section class="Services-sec main-padding">
+    <!-- Start English Features Section -->
+    <section class="Features-sec py-2 show_lang" data-lang='en'>
+      <div class="container">
+
+        <div class='content_con'>
+          <h2 class="main-title mx-auto mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">Confirming
+            your choice with us</h2>
+
+          <div class="Features_cards">
+
+            <!-- Card -->
+            <div class="Feature_card" data-aos="fade-up" data-aos-delay="100">
+              <div class='card_icon'>
+                <i class="fa-solid fa-school"></i>
+              </div>
+
+              <div class="content">
+                <h3 class="title">A unique swimming academy</h3>
+                <p class="desc">
+                  aiming to revolutionize the approach to teaching children to swim and engage with their parents. Our
+                  goal is to provide an innovative and motivating learning experience
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="Feature_card" data-aos="fade-up" data-aos-delay="200">
+              <div class='card_icon'>
+                <i class="fa-solid fa-user-plus"></i>
+              </div>
+
+              <div class="content">
+                <h3 class="title">Self-improvement</h3>
+                <p class="desc">
+                  Self-improvement is our goal as we engage in a variety of courses to discover the latest trends in
+                  swim education
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="Feature_card" data-aos="fade-up" data-aos-delay="300">
+              <div class='card_icon'>
+                <i class="fa-solid fa-flag"></i>
+              </div>
+
+              <div class="content">
+                <h3 class="title">modern methods</h3>
+                <p class="desc">
+                  We adopt modern methods with a genuine passion for sports to enhance an active lifestyle.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End English Features Section -->
+
+
+    <!-- Start Arabic Services Section -->
+    <section class="Services-sec main-padding show_lang" data-lang='ar'>
       <div class="container">
         <h2 class="main-title mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">خدماتنا</h2>
-        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">هذه خدماتنا التى نقدمها لكم بأفضل جودة</p>
+        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">تقدم اكاديمية "حياة الرياضيه " خدمات مخصصه
+          لتحسين وتطوير مهارات السباحة واللياقة البدنية</p>
 
         <div class="grid-3">
 
           <!-- Card -->
           <div class="services-card" data-aos="fade-up" data-aos-delay="100">
             <div class='service-img'>
-              <img src="./assets/imgs/about1.jpeg" alt="" class="img">
+              <img src="./assets/imgs/img4.jpg" alt="" class="img">
             </div>
 
             <div class="services_con">
@@ -295,13 +454,12 @@
                 <div class='card_icon'>
                   <i class="fa-solid fa-person-swimming"></i>
                 </div>
-                <h3 class="service-name">اسم الخدمة</h3>
+                <h3 class="service-name">جلسات سباحه الاطفال</h3>
                 <p class="desc">
-                  بساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.
-                  كان
-                  لوريم إيبسوم ولايزال المعيار للنص الشكلي
+                  "للأطفال من سن سنتين ونصف وما فوق، وعلماً أن عدد الجروب يتراوح من ٣ إلى ٤ أطفال، يُرجى التواصل مع
+                  الفريق للحصول على عرضك وبدء رحلة طفلك في تعلم السباحة مع أحد مدربينا المحترفين."
                 </p>
-                <a href="service-details.html" class="main-btn transparent sm"> عرض المزيد</a>
+                <a href="contact-us.html" class="main-btn transparent sm"> اطلب الأن</a>
               </div>
             </div>
           </div>
@@ -309,7 +467,7 @@
           <!-- Card -->
           <div class="services-card" data-aos="fade-up" data-aos-delay="200">
             <div class='service-img'>
-              <img src="./assets/imgs/slider3.jpg" alt="" class="img">
+              <img src="./assets/imgs/img1.jpg" alt="" class="img">
             </div>
 
             <div class="services_con">
@@ -317,13 +475,13 @@
                 <div class='card_icon'>
                   <i class="fa-solid fa-person-swimming"></i>
                 </div>
-                <h3 class="service-name">اسم الخدمة</h3>
+                <h3 class="service-name">سيمي برايفت</h3>
                 <p class="desc">
-                  بساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.
-                  كان
-                  لوريم إيبسوم ولايزال المعيار للنص الشكلي
+                  عدد الأفراد في الجروب محدود إلى ٢ فقط.
+                  للأطفال من سن سنتين ونصف وما فوق، وكذلك للبالغين والسيدات. يرجى التواصل مع الفريق للحصول على عرضك وبدء
+                  رحلة طفلك في تعلم السباحة مع أحد مدربينا المحترفين.
                 </p>
-                <a href="service-details.html" class="main-btn transparent sm"> عرض المزيد</a>
+                <a href="contact-us.html" class="main-btn transparent sm"> اطلب الأن</a>
               </div>
             </div>
           </div>
@@ -331,7 +489,7 @@
           <!-- Card -->
           <div class="services-card" data-aos="fade-up" data-aos-delay="300">
             <div class='service-img'>
-              <img src="./assets/imgs/about1.jpeg" alt="" class="img">
+              <img src="./assets/imgs/services1.jpg" alt="" class="img">
             </div>
 
             <div class="services_con">
@@ -339,28 +497,114 @@
                 <div class='card_icon'>
                   <i class="fa-solid fa-person-swimming"></i>
                 </div>
-                <h3 class="service-name">اسم الخدمة</h3>
+                <h3 class="service-name">دروس السباحة الخاصة ( تدريب متنقل في موقعك) </h3>
                 <p class="desc">
-                  بساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.
-                  كان
-                  لوريم إيبسوم ولايزال المعيار للنص الشكلي
+                  عدد الجروب فرد واحد فقط
+                  الجلسات السباحية الخاصة (Private Swim Sessions) تتيح للفرد فقط فرصة تعلم السباحة بشكل فردي، حيث يتم
+                  التركيز بشكل خاص على تلبية احتياجاته وتحسين مهاراته في جو هادئ ومخصص.
+                  تواصل مع الفريق واحصل علي عرضك وابدا رحلتك في تعليم السباحة مع احد مدربينا المحترفين .
                 </p>
-                <a href="service-details.html" class="main-btn transparent sm"> عرض المزيد</a>
+                <a href="contact-us.html" class="main-btn transparent sm"> اطلب الأن</a>
               </div>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
-    <!-- End Services Section -->
+    <!-- End Arabic Services Section -->
 
 
-    <!-- Start Team Section -->
-    <section class="team">
+    <!-- Start English Services Section -->
+    <section class="Services-sec main-padding show_lang" data-lang='en'>
+      <div class="container">
+        <h2 class="main-title mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">our services</h2>
+        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">Life Sports Academy offers customized services
+          to enhance and develop swimming skills and physical fitness. These services include</p>
+
+        <div class="grid-3">
+
+          <!-- Card -->
+          <div class="services-card" data-aos="fade-up" data-aos-delay="100">
+            <div class='service-img'>
+              <img src="./assets/imgs/img4.jpg" alt="" class="img">
+            </div>
+
+            <div class="services_con">
+              <div class="service-content">
+                <div class='card_icon'>
+                  <i class="fa-solid fa-person-swimming"></i>
+                </div>
+                <h3 class="service-name">Children's Swimming Sessions</h3>
+                <p class="desc">
+                  For children aged two and a half and above, and please note that the group size ranges from 3 to 4
+                  children. Kindly contact the team to receive your offer and initiate your child's journey in learning
+                  to swim with one of our professional coaches
+                </p>
+                <a href="contact-us.html" class="main-btn transparent sm"> Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="services-card" data-aos="fade-up" data-aos-delay="200">
+            <div class='service-img'>
+              <img src="./assets/imgs/img1.jpg" alt="" class="img">
+            </div>
+
+            <div class="services_con">
+              <div class="service-content">
+                <div class='card_icon'>
+                  <i class="fa-solid fa-person-swimming"></i>
+                </div>
+                <h3 class="service-name">Semi-Private</h3>
+                <p class="desc">
+                  The number of individuals in the group is limited to 2 only.
+                  For children aged two and a half and above, as well as adults and ladies. Please contact the team to
+                  receive your offer and commence your child's swimming journey with one of our professional coaches
+                </p>
+                <a href="contact-us.html" class="main-btn transparent sm"> Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="services-card" data-aos="fade-up" data-aos-delay="300">
+            <div class='service-img'>
+              <img src="./assets/imgs/services1.jpg" alt="" class="img">
+            </div>
+
+            <div class="services_con">
+              <div class="service-content">
+                <div class='card_icon'>
+                  <i class="fa-solid fa-person-swimming"></i>
+                </div>
+                <h3 class="service-name">Private Swim Sessions</h3>
+                <p class="desc">
+                  Group size is limited to one individual only.
+                  Private Swim Sessions provide a unique individual learning experience, focusing entirely on meeting
+                  the individual's needs and enhancing their skills in a calm and dedicated environment. Contact the
+                  team, get your offer, and embark on your swimming journey with one of our professional coaches."
+                </p>
+                <a href="contact-us.html" class="main-btn transparent sm"> Order Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End English Services Section -->
+
+
+    <!-- Start Arabic Team Section -->
+    <section class="team show_lang" data-lang='ar'>
       <div class="container">
         <h2 class="main-title mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">فريق العمل</h2>
-        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">فريق مدربي "اكاديمية حياه الرياضيه " يقدم تجربه سباحه مميزه وشامله يتمتعون بمهارات تدريبه متقدمه</p>
+        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">فريق مدربي "اكاديمية حياه الرياضيه " يقدم
+          تجربه سباحه مميزه وشامله يتمتعون بمهارات تدريبه متقدمه</p>
 
         <div class="row">
 
@@ -432,46 +676,185 @@
 
       </div>
     </section>
-    <!-- End Team Section -->
+    <!-- End Arabic Team Section -->
 
 
-    <!-- Start clients Section -->
-    <section class="client-section main-padding">
+    <!-- Start English Team Section -->
+    <section class="team show_lang" data-lang='en'>
+      <div class="container">
+        <h2 class="main-title mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">Our Team</h2>
+        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">
+          Our experienced team at "Hayah Sports Academy" delivers a distinctive and comprehensive swimming experience
+        </p>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/imgs/team-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>محمد القحطانى</h4>
+                <span>مدرب سباحة</span>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                  العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/imgs/team-3.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>رياض الوليد</h4>
+                <span>مدرب سباحة</span>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                  العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/imgs/team-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>محمد القحطانى</h4>
+                <span>مدرب سباحة</span>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                  العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/imgs/team-3.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>رياض الوليد</h4>
+                <span>مدرب سباحة</span>
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                  العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End English Team Section -->
+
+
+    <!-- Start English clients Section -->
+    <section class="client-section main-padding show_lang" data-lang='ar'>
       <div class="container">
         <h2 class="main-title mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">
-          شركاء النجاح
+          مواقعنا
           <span class="line"></span>
         </h2>
-        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">لن يكتمل هذا النجاح بدون شركائنا</p>
-
+        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">خدماتنا متاحة في المواقع التالية</p>
 
         <div class="clients-slider owl-carousel">
 
           <div class="client-item">
-            <img loading="lazy" src="assets/imgs/client1.png" alt="" class="brand-img">
+            <a href='our-locations.html'>ميرا</a>
           </div>
 
           <div class="client-item">
-            <img loading="lazy" src="assets/imgs/client2.png" alt="" class="brand-img">
+            <a href='our-locations.html'>تاون اسكوير</a>
           </div>
 
           <div class="client-item">
-            <img loading="lazy" src="assets/imgs/client3.png" alt="" class="brand-img">
+            <a href='our-locations.html'>ميرا اويسس</a>
           </div>
 
           <div class="client-item">
-            <img loading="lazy" src="assets/imgs/client4.png" alt="" class="brand-img">
+            <a href='our-locations.html'>مدن</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>سرينا</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>اربيان رانشز</a>
           </div>
 
         </div>
       </div>
 
     </section>
-    <!-- End clients Section -->
+    <!-- End English clients Section -->
 
 
-    <!-- Start Footer -->
-    <footer class="footer">
+    <!-- Start English clients Section -->
+    <section class="client-section main-padding show_lang" data-lang='en'>
+      <div class="container">
+        <h2 class="main-title mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">
+          our locations
+          <span class="line"></span>
+        </h2>
+        <p class='main_text mb-5' data-aos="fade-up" data-aos-delay="250">Our services are available at the following
+          locations</p>
+
+        <div class="clients-slider owl-carousel">
+
+          <div class="client-item">
+            <a href='our-locations.html'>Mira</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>Layan</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>Town Square</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>Mira Oasis</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>Mudon</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>Serena</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>Arabian Ranches</a>
+          </div>
+
+          <div class="client-item">
+            <a href='our-locations.html'>Al Waha</a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- End English clients Section -->
+
+
+    <!-- Start Arbic Footer -->
+    <footer class="footer show_lang" data-lang='ar'>
       <div class="container">
 
         <div class="row footer-cards gy-4">
@@ -483,8 +866,8 @@
               </a>
 
               <p class="footer-info">
-                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                يسعدنا ان نعلن اننا متاحين للحضور الي المسبح الذي يقع في المجمع او الكومباوند الذي تعيش فيه في الوقت
+                الذي يناسبك بشكل مثالي ممايجعل تجربتك التدريبيه مرنه وملائمه لجدولك
               </p>
             </div>
           </div>
@@ -495,7 +878,7 @@
               <ul class="footer-links">
 
                 <li class="foot-link">
-                  <a href="packages.html" class="link">
+                  <a href="index.html" class="link">
                     <i class="fa-solid fa-angles-left ic"></i>
                     <span> الرئيسية</span>
                   </a>
@@ -529,9 +912,9 @@
 
               <ul class="footer-links">
                 <li class="foot-link">
-                  <a href="tel:+966 55 932 2738" target="_blank" class="link">
+                  <a href="tel:+971505858350" target="_blank" class="link">
                     <i class="fa-solid fa-phone-flip ic"></i>
-                    <span> +966 55 932 2738</span>
+                    <span> +971505858350</span>
                   </a>
                 </li>
                 <li class="foot-link">
@@ -543,7 +926,7 @@
                 <li class="foot-link">
                   <div class="link not-pointer">
                     <i class="fa-regular fa-map ic"></i>
-                    <span>أكاديمية حياة لتعليم السباحة</span>
+                    <span>دبي - الإمارات العربية المتحدة</span>
                   </div>
                 </li>
               </ul>
@@ -557,12 +940,103 @@
     <!-- End Footer -->
 
 
+    <!-- Start English Footer -->
+    <footer class="footer show_lang" data-lang='en'>
+      <div class="container">
+
+        <div class="row footer-cards gy-4">
+
+          <div class="col-lg-4 col-md-12">
+            <div class="foot-content">
+              <a href="index.html">
+                <img src="assets/imgs/logo.png" alt="" class="foot-logo">
+              </a>
+
+              <p class="footer-info">
+                We are delighted to announce that we are available for attendance at the pool located within the complex or compound where you reside at a time that suits you perfectly. This makes your training experience flexible and tailored to your schedule
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="foot-content">
+              <h3 class="footer-head">Quick links</h3>
+              <ul class="footer-links">
+
+                <li class="foot-link">
+                  <a href="index.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span> Home</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="our-services.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span>Our Services</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="images-library.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span>Photo Library</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="contact-us.html" class="link">
+                    <i class="fa-solid fa-angles-left ic"></i>
+                    <span>Contact Us</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="foot-content">
+              <h3 class="footer-head">Contact Us</h3>
+
+              <ul class="footer-links">
+                <li class="foot-link">
+                  <a href="tel:+971505858350" target="_blank" class="link">
+                    <i class="fa-solid fa-phone-flip ic"></i>
+                    <span> +971505858350</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <a href="mailto:example@gmail.com" target="_blank" class="link">
+                    <i class="fa-regular fa-envelope ic"></i>
+                    <span>example@gmail.com</span>
+                  </a>
+                </li>
+                <li class="foot-link">
+                  <div class="link not-pointer">
+                    <i class="fa-regular fa-map ic"></i>
+                    <span>Dubai United Arab Emirates</span>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <!-- End English Footer -->
+
+
     <!-- Start CopyRight -->
     <div class="copy-right">
       <div class="container">
-        <div class="copy-content">
+        <div class="copy-content show_lang" data-lang='ar'>
 
           جميع الحقوق محفوظة لأكاديمية حياة لتعليم السباحة © 2024
+
+        </div>
+        <div class="copy-content show_lang" data-lang='en'>
+
+          All rights reserved to Hayah Swimming Academy © 2024
 
         </div>
       </div>

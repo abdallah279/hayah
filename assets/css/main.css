@@ -2736,6 +2736,11 @@ html[lang=ar] .about-content .about-img::after {
   border-radius: 15px;
   background-color: rgba(8, 176, 221, 0.06);
 }
+@media screen and (max-width: 768px) {
+  .Features-sec .content_con {
+    padding: 20px 15px;
+  }
+}
 
 .Features_cards {
   display: grid;
@@ -2747,7 +2752,6 @@ html[lang=ar] .about-content .about-img::after {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 24px 20px;
-    padding: 20px 15px;
   }
 }
 .Features_cards .Feature_card {
@@ -2844,11 +2848,11 @@ html[lang=ar] .about-content .about-img::after {
   transition: all 0.31s ease-in-out;
 }
 .services-card .services_con {
-  height: 200px;
+  height: 245px;
 }
 @media screen and (max-width: 425px) {
   .services-card .services_con {
-    height: 175px;
+    height: auto;
   }
 }
 .services-card .service-content {
@@ -2888,10 +2892,10 @@ html[lang=ar] .about-content .about-img::after {
   font-size: 14px;
   margin-bottom: 14px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 80px;
+  height: 135px;
 }
 @media screen and (max-width: 425px) {
   .services-card .service-content .desc {
@@ -3106,6 +3110,7 @@ html[lang=ar] .service-detailes.previous-item .content .deatiles-slider .item .f
   align-items: center;
   box-shadow: 0 0 5px 0 rgba(32, 32, 32, 0.1);
   height: 120px;
+  font-size: 16px;
 }
 .client-item .brand-img {
   max-width: 100px;
