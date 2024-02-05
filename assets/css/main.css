@@ -2848,11 +2848,11 @@ html[lang=ar] .about-content .about-img::after {
   transition: all 0.31s ease-in-out;
 }
 .services-card .services_con {
-  height: 245px;
+  height: 295px;
 }
 @media screen and (max-width: 425px) {
   .services-card .services_con {
-    height: auto;
+    height: 290px;
   }
 }
 .services-card .service-content {
@@ -2892,16 +2892,16 @@ html[lang=ar] .about-content .about-img::after {
   font-size: 14px;
   margin-bottom: 14px;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 135px;
+  height: 185px;
 }
 @media screen and (max-width: 425px) {
   .services-card .service-content .desc {
-    height: 70px;
     font-size: 13px;
     height: auto;
+    -webkit-line-clamp: 10;
   }
 }
 .services-card:hover .service-img .img {
@@ -2979,7 +2979,7 @@ html[lang=ar] .service-detailes .content .deatiles-slider::after {
   border-radius: 5px;
 }
 .service-detailes .content .deatiles-slider .item .img {
-  height: 320px;
+  height: 400px;
   width: 100%;
   object-fit: cover;
 }
