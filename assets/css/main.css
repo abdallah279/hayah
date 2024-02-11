@@ -2179,6 +2179,8 @@ html[lang=ar] .dropdown-menu.drop-filter.show {
 .page-header .header-content .social-icon .social-ic .ic {
   max-width: 18px;
   max-height: 15px;
+  font-size: 14px;
+  color: #fff;
 }
 
 .page-navbar {
