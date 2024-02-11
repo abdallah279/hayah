@@ -3174,7 +3174,7 @@ html[lang=ar] .service-detailes.previous-item .content .deatiles-slider .item .f
 .team .member .member-info h4 {
   font-weight: 700;
   margin-bottom: 7px;
-  font-size: 18px;
+  font-size: 17px;
   color: #012970;
 }
 @media screen and (max-width: 425px) {
@@ -3196,9 +3196,8 @@ html[lang=ar] .service-detailes.previous-item .content .deatiles-slider .item .f
 }
 
 .team .member .member-info p {
-  font-style: italic;
   font-size: 14px;
-  padding-top: 15px;
+  padding-top: 7px;
   line-height: 26px;
   color: #5e5e5e;
 }
