@@ -3233,6 +3233,23 @@ html[lang=ar] .service-detailes.previous-item .content .deatiles-slider .item .f
     padding: 30px 20px;
   }
 }
+.contact-style .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+.contact-style .social-icons .social-ic {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: #08B0DD;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .contact-title {
   font-size: 16px;

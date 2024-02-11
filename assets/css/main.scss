@@ -721,6 +721,18 @@
   @media screen and (max-width: $screen-sm) {
     padding: 30px 20px;
   }
+
+  .social-icons{
+    @include center;
+    gap: 9px;
+    .social-ic{
+      @include circle(32px);
+      background-color: $main;
+      color: #fff;
+      font-size: 12px;
+      @include center;
+    }
+  }
 }
 
 .contact-title {
