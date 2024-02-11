@@ -41,11 +41,11 @@
   @include dir-right(50px);
   @include circle(40px);
   @include center;
-  background: $main;
+  background: #fff;
+  border: 1px solid $main;
   font-size: 14px;
   animation: lab_top_up 5s linear infinite;  
   transition: all 0.7s ease;
-  border: 2px solid $main;
   z-index: 788;
   
   &.active {
@@ -59,7 +59,7 @@
   }
 }
 .scrollToTop i {
-  color: #fff;
+  color: $main;
   z-index: 1;
   // font-size: 18px;
 }

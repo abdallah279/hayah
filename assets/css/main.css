@@ -272,11 +272,11 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #08B0DD;
+  background: #fff;
+  border: 1px solid #08B0DD;
   font-size: 14px;
   animation: lab_top_up 5s linear infinite;
   transition: all 0.7s ease;
-  border: 2px solid #08B0DD;
   z-index: 788;
 }
 html[lang=en] .scrollToTop {
@@ -299,7 +299,7 @@ html[lang=ar] .scrollToTop {
 }
 
 .scrollToTop i {
-  color: #fff;
+  color: #08B0DD;
   z-index: 1;
 }
 
